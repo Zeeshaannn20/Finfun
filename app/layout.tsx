@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Architects_Daughter, Nunito } from "next/font/google";
+import { Architects_Daughter, Nunito, Patrick_Hand_SC } from "next/font/google";
 import Analytics from "@/components/Analytics";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -8,6 +8,7 @@ import { site } from "@/lib/content";
 import "./globals.css";
 
 const hand = Architects_Daughter({ weight: "400", subsets: ["latin"], variable: "--font-hand", display: "swap" });
+const caps = Patrick_Hand_SC({ weight: "400", subsets: ["latin"], variable: "--font-caps", display: "swap" });
 const body = Nunito({ subsets: ["latin"], variable: "--font-body", display: "swap" });
 
 export const metadata: Metadata = {
@@ -24,7 +25,7 @@ export const viewport: Viewport = { themeColor: "#fffbf0" };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en-IN" className={`${hand.variable} ${body.variable}`}>
+    <html lang="en-IN" className={`${hand.variable} ${caps.variable} ${body.variable}`}>
       <body>
         <a className="skip" href="#main">
           Skip to content
