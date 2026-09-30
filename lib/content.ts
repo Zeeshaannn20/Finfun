@@ -1,0 +1,286 @@
+// All editable site content lives here so it can move to a headless CMS (Sanity/Strapi)
+// without touching page code. Items marked TODO(FinFun) are awaiting confirmation (see PRD "Open decisions").
+
+export const site = {
+  name: "FinFun",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.finfun.club",
+  tagline: "Building the future of financial dignity",
+  email: "partnerships@finfun.club",
+  phone: "+91 97398 85822",
+  whatsapp: "919739885822",
+  grades: "Grades 6 to 10",
+  loginUrl: process.env.NEXT_PUBLIC_LOGIN_URL ?? "",
+  financialPassportUrl: process.env.NEXT_PUBLIC_FINANCIAL_PASSPORT_URL ?? "",
+};
+
+export const nav = [
+  { href: "/schools", label: "For Schools" },
+  { href: "/parents", label: "For Parents" },
+  { href: "/programs", label: "Programs" },
+  { href: "/about", label: "About" },
+  { href: "/blog", label: "Blog" },
+  { href: "/contact", label: "Contact" },
+];
+
+export const impact = [
+  { value: "35,000+", label: "Schools", icon: "/a/icons/impact-schools.webp" },
+  { value: "20,00,000+", label: "Students", icon: "/a/icons/impact-students.webp" },
+  { value: "500+", label: "Hours of training", icon: "/a/icons/impact-hours-of-training.webp" },
+  { value: "350+", label: "Teachers trained", icon: "/a/icons/impact-teachers-trained.webp" },
+];
+
+export const values = [
+  {
+    title: "Early Confidence",
+    text: "Teens handle UPI, pocket money and online shopping now. We build money confidence before the big decisions arrive.",
+    icon: "/a/icons/value-early-confidence.webp",
+  },
+  {
+    title: "Lifelong Habits",
+    text: "Save first, budget smart, grow steadily — habits practised in class that stick for life.",
+    icon: "/a/icons/value-lifelong-habits.webp",
+  },
+  {
+    title: "Practical Skills",
+    text: "Real topics: scams, SIPs, bank accounts, side hustles. No boring theory — skills they use the same week.",
+    icon: "/a/icons/value-practical-skills.webp",
+  },
+];
+
+export const howItWorks = [
+  { title: "Learn", text: "Short, story-led lessons on one real money topic at a time.", img: "/a/mascot-poses/mascot-read.webp" },
+  { title: "Play", text: "Games, quizzes, role-play and challenges put every idea into action.", img: "/a/icons/journey-interactive-activities.webp" },
+  { title: "Grow", text: "Badges, leaderboards and real savings goals keep teens coming back.", img: "/a/icons/journey-leader-board.webp" },
+];
+
+export const methods = [
+  { title: "Mind Mapping", text: "Connect earn, save, spend and share into one big picture.", img: "/a/home-page/method-mind-mapping.webp" },
+  { title: "Theatre", text: "Act out the shop, the bank and the scam call — and learn by doing.", img: "/a/home-page/method-theatre.webp" },
+  { title: "Quiz", text: "Fast rounds on needs vs wants, UPI safety and compounding.", img: "/a/home-page/method-quiz.webp" },
+  { title: "Story Writing", text: "Teens write their own money goals and future plans.", img: "/a/home-page/method-story-writing.webp" },
+];
+
+export const journey = [
+  { title: "Interactive Activities", icon: "/a/icons/journey-interactive-activities.webp", text: "Hands-on games for every topic." },
+  { title: "Competitions", icon: "/a/icons/journey-competitions.webp", text: "Inter-class challenges with prizes." },
+  { title: "Rubric Evaluation", icon: "/a/icons/journey-rubric-evaluation.webp", text: "Clear, fair assessment of learning." },
+  { title: "Vernacular Version", icon: "/a/icons/journey-vernacular-version.webp", text: "Content in local languages." },
+  { title: "Teacher Training", icon: "/a/icons/journey-teacher-training-modules.webp", text: "Ready modules so any teacher can lead." },
+  { title: "Hands-on Workshops", icon: "/a/icons/journey-hands-on-workshops.webp", text: "Live sessions by FinFun trainers." },
+  { title: "Learning Kits", icon: "/a/icons/journey-learning-kits.webp", text: "Cards, games and money stories." },
+  { title: "Personal Finance for Teachers", icon: "/a/icons/journey-personal-finance-training.webp", text: "Money skills for staff, too." },
+  { title: "Leader Board", icon: "/a/icons/journey-leader-board.webp", text: "Friendly ranking keeps energy high." },
+  { title: "Impact Report", icon: "/a/icons/journey-impact-report.webp", text: "Measured outcomes for your school." },
+];
+
+export const partnershipSteps = [
+  { title: "Partner", text: "Sign up and we plan the program around your timetable.", icon: "/a/icons/impact-schools.webp" },
+  { title: "Train", text: "Your teachers get trained with ready-to-run modules.", icon: "/a/icons/journey-teacher-training-modules.webp" },
+  { title: "Play", text: "Kits reach classrooms; students learn through games.", icon: "/a/icons/journey-learning-kits.webp" },
+  { title: "Measure", text: "Rubric-based evaluation and an impact report for you.", icon: "/a/icons/journey-impact-report.webp" },
+];
+
+export type Program = {
+  slug: "pro" | "advantage";
+  name: string;
+  grades: string;
+  price: number;
+  focus: string;
+  sticker: string;
+  topics: { title: string; text: string; sticker: string }[];
+  format: string[];
+  checkoutUrl: string;
+};
+
+// TODO(FinFun): confirm grade split, prices, session count and timings.
+export const programs: Program[] = [
+  {
+    slug: "pro",
+    name: "FinFun Pro",
+    grades: "Grades 6–7",
+    price: 1499,
+    focus: "Needs vs wants, budgeting, saving goals, UPI and scam safety.",
+    sticker: "/a/sticker/c05-do-i-really-need-it.webp",
+    topics: [
+      { title: "Needs vs wants", text: "The one question to ask before every purchase.", sticker: "/a/sticker/c05-do-i-really-need-it.webp" },
+      { title: "Budgeting", text: "Split pocket money with the 50-30-20 rule.", sticker: "/a/sticker/t06-50-30-20-rule.webp" },
+      { title: "Saving goals", text: "Plan for the laptop, the shoes, the trip.", sticker: "/a/sticker/c11-saving-for-my-laptop.webp" },
+      { title: "UPI and scan safety", text: "Pay smart, check the name, never rush.", sticker: "/a/sticker/c01-pay-smart-not-fast.webp" },
+      { title: "Scam safety", text: "Spot fake prizes and never share an OTP.", sticker: "/a/sticker/c04-never-share-otp.webp" },
+      { title: "Sale is not saving", text: "See through discounts and impulse buys.", sticker: "/a/sticker/t08-sale-is-not-saving.webp" },
+    ],
+    format: ["Weekly live sessions with a FinFun trainer", "Games, quizzes and challenges every session", "Printable activity kit", "Badges and a completion certificate"],
+    checkoutUrl: process.env.NEXT_PUBLIC_CHECKOUT_PRO ?? "",
+  },
+  {
+    slug: "advantage",
+    name: "FinFun Advantage",
+    grades: "Grades 8–10",
+    price: 2499,
+    focus: "Banking, SIPs and compounding, inflation, investing basics, side hustles.",
+    sticker: "/a/sticker/c07-investor-in-training.webp",
+    topics: [
+      { title: "My first bank account", text: "Savings accounts, debit cards and staying safe.", sticker: "/a/sticker/t10-my-first-account.webp" },
+      { title: "SIPs and compounding", text: "Why starting early beats starting big.", sticker: "/a/sticker/t04-start-a-sip-early.webp" },
+      { title: "Inflation is real", text: "What ₹100 buys today vs in ten years.", sticker: "/a/sticker/t05-inflation-is-real.webp" },
+      { title: "Investing basics", text: "Stocks, funds, risk and why we diversify.", sticker: "/a/sticker/t15-diversify.webp" },
+      { title: "Side hustles", text: "Earning your first income, the smart way.", sticker: "/a/sticker/t12-side-hustle-era.webp" },
+      { title: "Avoid the EMI trap", text: "How loans and ‘no-cost EMI’ really work.", sticker: "/a/sticker/t13-avoid-the-emi-trap.webp" },
+    ],
+    format: ["Weekly live sessions with a FinFun trainer", "Case studies and market simulation games", "Printable activity kit", "Badges and a completion certificate"],
+    checkoutUrl: process.env.NEXT_PUBLIC_CHECKOUT_ADVANTAGE ?? "",
+  },
+];
+
+export const getProgram = (slug: string) => programs.find((p) => p.slug === slug);
+
+export const parentTopics = [
+  { title: "Budgeting", grade: "Grade 6+", sticker: "/a/sticker/t06-50-30-20-rule.webp" },
+  { title: "Saving goals", grade: "Grade 6+", sticker: "/a/sticker/t14-goal-loading.webp" },
+  { title: "UPI and scam safety", grade: "Grade 6+", sticker: "/a/sticker/t02-scam-not-today.webp" },
+  { title: "First bank account", grade: "Grade 8+", sticker: "/a/sticker/c09-my-first-debit-card.webp" },
+  { title: "SIPs and investing basics", grade: "Grade 8+", sticker: "/a/sticker/t03-let-it-compound.webp" },
+  { title: "Side hustles", grade: "Grade 8+", sticker: "/a/sticker/t12-side-hustle-era.webp" },
+];
+
+export type Testimonial = {
+  name: string;
+  role: string;
+  quote: string;
+  avatar: string;
+  group: "school" | "official" | "parent" | "teacher";
+};
+
+// TODO(FinFun): replace illustrated avatars with real photos (with consent).
+export const testimonials: Testimonial[] = [
+  {
+    name: "Shirisha",
+    role: "Department of Education Commissionerate, Government of Telangana",
+    quote:
+      "As part of our life skills book, we have integrated FinFun activities for all students from 6th to 10th grade, across 35,000 schools, empowering 20 lakh+ students. This intervention is the need of the hour.",
+    avatar: "/a/testimonials-and-team/avatar-official-senior.webp",
+    group: "official",
+  },
+  {
+    name: "Keshav Murthy",
+    role: "CSR, Bengaluru Airport",
+    quote:
+      "FinFun’s 2-year pilot at Government Aradeshanahalli school has been transformational for our 6th and 7th graders. Children have started saving Rs. 2,000–6,000, and spending now has a lens of need and want.",
+    avatar: "/a/testimonials-and-team/avatar-csr-professional.webp",
+    group: "school",
+  },
+  {
+    name: "Krutika’s mother",
+    role: "Parent",
+    quote:
+      "Very happy that our children are thinking about saving at an early stage and learning how to plan money for future college education. We are very happy that my child is learning financial literacy.",
+    avatar: "/a/testimonials-and-team/avatar-parent-mother.webp",
+    group: "parent",
+  },
+  {
+    name: "Ranjitha",
+    role: "Teacher",
+    quote:
+      "The trainers have high energy and plan the class minute by minute. The way it is taught is very simple and fun. Children wait for Saturdays for the FinFun classes.",
+    avatar: "/a/testimonials-and-team/avatar-teacher-woman.webp",
+    group: "teacher",
+  },
+  {
+    name: "Sri Vijayendra Prasad",
+    role: "Member of Parliament, Rajya Sabha",
+    quote:
+      "It is very good to see that team FinFun is working on a nation-building exercise. A right understanding about finances at an early age can change the way many underserved families live.",
+    avatar: "/a/testimonials-and-team/avatar-official-senior.webp",
+    group: "official",
+  },
+  {
+    name: "Andrew Collister",
+    role: "Australian Consulate",
+    quote:
+      "Happy to partner with FinFun, along with KIAF, as part of the Directorate program. The children’s enthusiasm shows how child-friendly the program is.",
+    avatar: "/a/testimonials-and-team/avatar-csr-professional.webp",
+    group: "official",
+  },
+  {
+    name: "Archana Devi",
+    role: "MLA PTR Office, Madurai",
+    quote:
+      "We piloted FinFun sessions in two schools in Madurai Municipal Corporation. Government school children can comfortably understand the curriculum, yet all the topics are covered.",
+    avatar: "/a/testimonials-and-team/avatar-teacher-woman.webp",
+    group: "school",
+  },
+  {
+    name: "Kalavathy",
+    role: "Shadow teacher",
+    quote:
+      "It inspired me to start my own savings journey. I saved around ₹70,000 during this tenure — and part of it helped in a medical emergency.",
+    avatar: "/a/testimonials-and-team/avatar-teacher-woman.webp",
+    group: "teacher",
+  },
+  {
+    name: "Supriya",
+    role: "Journalist, Times Group",
+    quote:
+      "This was not like any other class. I was amazed by how children were understanding banking at an early age — and actually enjoying it.",
+    avatar: "/a/testimonials-and-team/avatar-journalist.webp",
+    group: "school",
+  },
+  {
+    name: "Aravind Devarmane",
+    role: "Community volunteer, Gandaghatta Government School, Sringeri",
+    quote: "We never thought that in 45 minutes children could be engaged with a financial literacy class that is fun and memorable.",
+    avatar: "/a/testimonials-and-team/avatar-volunteer.webp",
+    group: "school",
+  },
+];
+
+// TODO(FinFun): swap for logo files (with permission).
+export const partners = [
+  { name: "Government of Telangana", note: "Dept. of School Education" },
+  { name: "Bengaluru Airport", note: "CSR partner" },
+  { name: "Australian Consulate", note: "with KIAF" },
+  { name: "Madurai Corporation", note: "School pilot" },
+  { name: "Prakruti Shala", note: "Sir CV Raman House" },
+];
+
+// TODO(FinFun): replace with real classroom photos (grades 6–10, with written consent).
+export const classroom = [
+  { caption: "Scam-spotting challenge", sticker: "/a/sticker/t02-scam-not-today.webp", bg: "var(--pink-soft)" },
+  { caption: "UPI role-play", sticker: "/a/sticker/t01-scan-smart.webp", bg: "var(--sky-soft)" },
+  { caption: "Budget battle", sticker: "/a/sticker/t06-50-30-20-rule.webp", bg: "var(--yellow-soft)" },
+  { caption: "Money quiz finals", sticker: "/a/sticker/c08-money-quiz-champ.webp", bg: "var(--green-soft)" },
+  { caption: "Investing 101", sticker: "/a/sticker/c10-read-learn-invest.webp", bg: "var(--lavender-soft)" },
+  { caption: "Goal-setting letters", sticker: "/a/sticker/t14-goal-loading.webp", bg: "var(--pink-soft)" },
+];
+
+export const parentFaq = [
+  { q: "What grades is FinFun for?", a: "FinFun is for students in grades 6 to 10 (about 11 to 16 years old). Pro is for grades 6–7 and Advantage for grades 8–10." },
+  { q: "When are the sessions?", a: "Sessions run weekly, outside school hours. You’ll get the exact batch timings when you enrol, and can pick the batch that suits your teen." },
+  { q: "Is it online or offline?", a: "Parent enrolments are live online sessions led by a FinFun trainer. Schools can also run FinFun offline in class with trained teachers." },
+  { q: "Is it safe for my child?", a: "Yes. Only parents enrol and pay. Your teen gets a login created by you, we collect only their name and grade, we never show children’s names or photos publicly without your written consent, and there are no ads." },
+  { q: "Does my teen need a bank account or real money?", a: "No. All activities use play money and simulations. Real accounts are explained, never required." },
+  { q: "What is the refund policy?", a: "If FinFun isn’t right for your teen, ask for a refund within 7 days of your first session. See our refund policy for full details." },
+];
+
+export const schoolFaq = [
+  { q: "How does FinFun fit our timetable?", a: "We plan sessions around your existing periods — life skills, activity or club hours work well. Teachers get ready-to-run modules." },
+  { q: "Which grades can join?", a: "The program is designed for grades 6 to 10, with separate content tracks for middle and high school." },
+  { q: "Is FinFun available in local languages?", a: "Yes. A vernacular version is part of the FinFun Journey for partner schools." },
+  { q: "What does it cost?", a: "Pricing depends on the number of students and the model (trainer-led or teacher-led). CSR-funded options are available. Fill the form and we’ll send a proposal." },
+];
+
+// TODO(FinFun): real dates for the story timeline.
+export const story = [
+  { title: "The idea", text: "FinFun starts with a simple belief: every child deserves money skills, not just rich kids." },
+  { title: "First classrooms", text: "Pilots in government schools in Karnataka prove teens love learning money through games." },
+  { title: "Partners join", text: "CSR partners, consulates and local governments back FinFun to reach more schools." },
+  { title: "35,000 schools", text: "Telangana integrates FinFun activities into its life skills book for grades 6 to 10." },
+  { title: "Next: every teen", text: "Now FinFun opens to parents directly, so any teen can become money smart." },
+];
+
+export const team = [
+  { name: "Founding team", role: "Program & curriculum", avatar: "/a/testimonials-and-team/avatar-teacher-woman.webp" },
+  { name: "Trainers", role: "Classroom sessions", avatar: "/a/testimonials-and-team/avatar-teacher-man.webp" },
+  { name: "Partnerships", role: "Schools & CSR", avatar: "/a/testimonials-and-team/avatar-csr-professional.webp" },
+  { name: "Volunteers", role: "Community outreach", avatar: "/a/testimonials-and-team/avatar-volunteer.webp" },
+];

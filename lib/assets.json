@@ -1,0 +1,394 @@
+{
+ "/a/about-and-programs/banner-mission-1600x600.webp": [
+  1600,
+  600
+ ],
+ "/a/about-and-programs/learning-kit-illustration-1200x800.webp": [
+  1200,
+  800
+ ],
+ "/a/about-and-programs/school-partnership-flow-1800x620.webp": [
+  1600,
+  551
+ ],
+ "/a/blog-covers/blog-1-what-is-a-budget.webp": [
+  1200,
+  630
+ ],
+ "/a/blog-covers/blog-2-needs-vs-wants.webp": [
+  1200,
+  630
+ ],
+ "/a/blog-covers/blog-3-5-ways-kids-can-save.webp": [
+  1200,
+  630
+ ],
+ "/a/blog-covers/blog-4-pocket-money-tips.webp": [
+  1200,
+  630
+ ],
+ "/a/blog-covers/blog-5-keep-kids-safe-online.webp": [
+  1200,
+  630
+ ],
+ "/a/blog-covers/blog-cover-template.webp": [
+  1200,
+  630
+ ],
+ "/a/course-thumbnails/course-advantage-1280x720.webp": [
+  1280,
+  720
+ ],
+ "/a/course-thumbnails/course-basics-1280x720.webp": [
+  1280,
+  720
+ ],
+ "/a/course-thumbnails/course-pro-1280x720.webp": [
+  1280,
+  720
+ ],
+ "/a/gamification/badge-7-day-streak.webp": [
+  408,
+  518
+ ],
+ "/a/gamification/badge-budget-boss.webp": [
+  408,
+  518
+ ],
+ "/a/gamification/badge-goal-getter.webp": [
+  408,
+  518
+ ],
+ "/a/gamification/badge-money-smart.webp": [
+  408,
+  518
+ ],
+ "/a/gamification/badge-quiz-master.webp": [
+  408,
+  518
+ ],
+ "/a/gamification/badge-super-saver.webp": [
+  408,
+  518
+ ],
+ "/a/gamification/medal-1-gold.webp": [
+  348,
+  478
+ ],
+ "/a/gamification/medal-2-silver.webp": [
+  348,
+  478
+ ],
+ "/a/gamification/medal-3-bronze.webp": [
+  348,
+  478
+ ],
+ "/a/home-page/hero-banner-mobile-1080x1350.webp": [
+  1080,
+  1350
+ ],
+ "/a/home-page/method-mind-mapping.webp": [
+  480,
+  360
+ ],
+ "/a/home-page/method-quiz.webp": [
+  480,
+  360
+ ],
+ "/a/home-page/method-story-writing.webp": [
+  480,
+  360
+ ],
+ "/a/home-page/method-theatre.webp": [
+  480,
+  360
+ ],
+ "/a/icons/impact-hours-of-training.webp": [
+  480,
+  480
+ ],
+ "/a/icons/impact-schools.webp": [
+  480,
+  480
+ ],
+ "/a/icons/impact-students.webp": [
+  480,
+  480
+ ],
+ "/a/icons/impact-teachers-trained.webp": [
+  480,
+  480
+ ],
+ "/a/icons/journey-competitions.webp": [
+  480,
+  480
+ ],
+ "/a/icons/journey-hands-on-workshops.webp": [
+  480,
+  480
+ ],
+ "/a/icons/journey-impact-report.webp": [
+  480,
+  480
+ ],
+ "/a/icons/journey-interactive-activities.webp": [
+  480,
+  480
+ ],
+ "/a/icons/journey-leader-board.webp": [
+  480,
+  480
+ ],
+ "/a/icons/journey-learning-kits.webp": [
+  600,
+  600
+ ],
+ "/a/icons/journey-personal-finance-training.webp": [
+  480,
+  480
+ ],
+ "/a/icons/journey-rubric-evaluation.webp": [
+  480,
+  480
+ ],
+ "/a/icons/journey-teacher-training-modules.webp": [
+  480,
+  480
+ ],
+ "/a/icons/journey-vernacular-version.webp": [
+  480,
+  480
+ ],
+ "/a/icons/value-early-confidence.webp": [
+  480,
+  480
+ ],
+ "/a/icons/value-lifelong-habits.webp": [
+  480,
+  480
+ ],
+ "/a/icons/value-practical-skills.webp": [
+  480,
+  480
+ ],
+ "/a/impact/impact-numbers-banner-1800x620.webp": [
+  1600,
+  551
+ ],
+ "/a/impact/impact-report-cover-A4.webp": [
+  1240,
+  1754
+ ],
+ "/a/mascot-poses/mascot-celebrate.webp": [
+  480,
+  534
+ ],
+ "/a/mascot-poses/mascot-coin.webp": [
+  480,
+  587
+ ],
+ "/a/mascot-poses/mascot-hero.webp": [
+  794,
+  907
+ ],
+ "/a/mascot-poses/mascot-lost.webp": [
+  480,
+  594
+ ],
+ "/a/mascot-poses/mascot-point.webp": [
+  480,
+  577
+ ],
+ "/a/mascot-poses/mascot-read.webp": [
+  480,
+  881
+ ],
+ "/a/mascot-poses/mascot-thanks.webp": [
+  480,
+  604
+ ],
+ "/a/mascot-poses/mascot-think.webp": [
+  480,
+  672
+ ],
+ "/a/mascot-poses/mascot-wave.webp": [
+  480,
+  663
+ ],
+ "/a/sticker/c01-pay-smart-not-fast.webp": [
+  560,
+  526
+ ],
+ "/a/sticker/c02-save-first-vibe-later.webp": [
+  560,
+  522
+ ],
+ "/a/sticker/c03-my-first-paycheck.webp": [
+  560,
+  569
+ ],
+ "/a/sticker/c04-never-share-otp.webp": [
+  560,
+  532
+ ],
+ "/a/sticker/c05-do-i-really-need-it.webp": [
+  560,
+  567
+ ],
+ "/a/sticker/c06-split-it-fair.webp": [
+  560,
+  531
+ ],
+ "/a/sticker/c07-investor-in-training.webp": [
+  560,
+  539
+ ],
+ "/a/sticker/c08-money-quiz-champ.webp": [
+  560,
+  541
+ ],
+ "/a/sticker/c09-my-first-debit-card.webp": [
+  560,
+  494
+ ],
+ "/a/sticker/c10-read-learn-invest.webp": [
+  560,
+  509
+ ],
+ "/a/sticker/c11-saving-for-my-laptop.webp": [
+  560,
+  481
+ ],
+ "/a/sticker/c12-talk-money-at-home.webp": [
+  560,
+  507
+ ],
+ "/a/sticker/t01-scan-smart.webp": [
+  560,
+  693
+ ],
+ "/a/sticker/t02-scam-not-today.webp": [
+  560,
+  659
+ ],
+ "/a/sticker/t03-let-it-compound.webp": [
+  560,
+  495
+ ],
+ "/a/sticker/t04-start-a-sip-early.webp": [
+  560,
+  551
+ ],
+ "/a/sticker/t05-inflation-is-real.webp": [
+  560,
+  544
+ ],
+ "/a/sticker/t06-50-30-20-rule.webp": [
+  560,
+  526
+ ],
+ "/a/sticker/t07-emergency-fund.webp": [
+  560,
+  514
+ ],
+ "/a/sticker/t08-sale-is-not-saving.webp": [
+  560,
+  581
+ ],
+ "/a/sticker/t09-track-subscriptions.webp": [
+  560,
+  484
+ ],
+ "/a/sticker/t10-my-first-account.webp": [
+  560,
+  530
+ ],
+ "/a/sticker/t11-learn-the-market.webp": [
+  560,
+  522
+ ],
+ "/a/sticker/t12-side-hustle-era.webp": [
+  560,
+  501
+ ],
+ "/a/sticker/t13-avoid-the-emi-trap.webp": [
+  560,
+  491
+ ],
+ "/a/sticker/t14-goal-loading.webp": [
+  560,
+  552
+ ],
+ "/a/sticker/t15-diversify.webp": [
+  560,
+  424
+ ],
+ "/a/sticker/t16-money-mindset.webp": [
+  560,
+  569
+ ],
+ "/a/testimonials-and-team/avatar-csr-professional.webp": [
+  480,
+  480
+ ],
+ "/a/testimonials-and-team/avatar-journalist.webp": [
+  480,
+  480
+ ],
+ "/a/testimonials-and-team/avatar-official-senior.webp": [
+  480,
+  480
+ ],
+ "/a/testimonials-and-team/avatar-parent-father.webp": [
+  480,
+  480
+ ],
+ "/a/testimonials-and-team/avatar-parent-mother.webp": [
+  480,
+  480
+ ],
+ "/a/testimonials-and-team/avatar-student-boy.webp": [
+  480,
+  480
+ ],
+ "/a/testimonials-and-team/avatar-student-girl.webp": [
+  480,
+  480
+ ],
+ "/a/testimonials-and-team/avatar-teacher-man.webp": [
+  480,
+  480
+ ],
+ "/a/testimonials-and-team/avatar-teacher-woman.webp": [
+  480,
+  480
+ ],
+ "/a/testimonials-and-team/avatar-volunteer.webp": [
+  480,
+  480
+ ],
+ "/a/testimonials-and-team/quote-mark.webp": [
+  283,
+  208
+ ],
+ "/a/testimonials-and-team/testimonial-card-sample-layout.webp": [
+  480,
+  245
+ ],
+ "/a/utility-pages/empty-state-no-courses.webp": [
+  1200,
+  800
+ ],
+ "/a/utility-pages/page-404.webp": [
+  1200,
+  800
+ ],
+ "/a/utility-pages/page-coming-soon.webp": [
+  1200,
+  800
+ ],
+ "/a/utility-pages/page-thank-you.webp": [
+  1200,
+  800
+ ]
+}

@@ -1,0 +1,87 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import Img from "@/components/Img";
+import { Faq, JoinBanner, JsonLd, PageHero, SectionHead, faqJsonLd, inr } from "@/components/Sections";
+import { getProgram, parentFaq, programs, site } from "@/lib/content";
+
+export const dynamicParams = false;
+export const generateStaticParams = () => programs.map((p) => ({ slug: p.slug }));
+
+export async function generateMetadata({ params }: PageProps<"/programs/[slug]">): Promise<Metadata> {
+  const p = getProgram((await params).slug);
+  if (!p) return {};
+  return { title: `${p.name} — financial literacy for ${p.grades.toLowerCase()}`, description: `${p.name} (${p.grades}, ${inr(p.price)}): ${p.focus}`, alternates: { canonical: `/programs/${p.slug}` } };
+}
+
+export default async function ProgramPage({ params }: PageProps<"/programs/[slug]">) {
+  const p = getProgram((await params).slug);
+  if (!p) notFound();
+  const other = programs.find((x) => x.slug !== p.slug)!;
+  return (
+    <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Course",
+          name: p.name,
+          description: p.focus,
+          provider: { "@type": "Organization", name: "FinFun", sameAs: site.url },
+          offers: { "@type": "Offer", price: p.price, priceCurrency: "INR", category: "Paid" },
+        }}
+      />
+      <JsonLd data={faqJsonLd(parentFaq)} />
+      <PageHero eyebrow={p.grades} title={p.name} lead={p.focus} art={p.sticker} tone={p.slug === "pro" ? "bg-sky" : "bg-yellow"}>
+        <p className="price" style={{ marginBottom: 20 }}>
+          {inr(p.price)} <small>per student</small>
+        </p>
+        <Link className="btn btn-blue btn-lg" href={`/enrol?program=${p.slug}`} data-track="enrol_click">
+          Enrol in {p.name.replace("FinFun ", "")}
+        </Link>
+      </PageHero>
+
+      <section className="section" aria-labelledby="inside-h">
+        <div className="wrap">
+          <SectionHead eyebrow="What’s inside" title={<span id="inside-h">Topics your teen will master</span>} />
+          <div className="grid g3">
+            {p.topics.map((t) => (
+              <div className="card topic-card" key={t.title}>
+                <Img src={t.sticker} alt="" sizes="96px" loading="lazy" />
+                <div>
+                  <h3>{t.title}</h3>
+                  <p>{t.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section bg-white" aria-labelledby="format-h">
+        <div className="wrap split">
+          <div>
+            <SectionHead left eyebrow="Format & timings" title={<span id="format-h">How it runs</span>} />
+            <ul className="ticks">
+              {p.format.map((f) => (
+                <li key={f}>{f}</li>
+              ))}
+              <li>Batch timings shared at enrolment — choose what fits your teen’s week</li>
+            </ul>
+          </div>
+          <Img className="banner-img" src="/a/about-and-programs/learning-kit-illustration-1200x800.webp" alt="Sample of the FinFun learning kit" sizes="(max-width: 860px) 90vw, 560px" loading="lazy" />
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="pfaq-h">
+        <div className="wrap">
+          <SectionHead eyebrow="FAQ" title={<span id="pfaq-h">Good to know</span>} />
+          <Faq items={parentFaq} />
+          <p className="center mt">
+            Teen in {other.grades.toLowerCase()}? See <Link href={`/programs/${other.slug}`}>{other.name}</Link>.
+          </p>
+        </div>
+      </section>
+      <JoinBanner audience="parents" title={`Enrol in ${p.name}`} text={`${p.grades} · ${inr(p.price)} · Pay by UPI, card or netbanking.`} />
+    </>
+  );
+}
