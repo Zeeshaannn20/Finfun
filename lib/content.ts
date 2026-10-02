@@ -3,7 +3,7 @@
 
 export const site = {
   name: "FinFun",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.finfun.club",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.finfun.club", // || (not ??) so an empty env var falls back too
   tagline: "Building the future of financial dignity",
   email: "partnerships@finfun.club",
   phone: "+91 97398 85822",
