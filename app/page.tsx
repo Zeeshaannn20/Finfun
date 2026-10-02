@@ -1,8 +1,10 @@
 import Link from "next/link";
 import Img from "@/components/Img";
 import { Classroom, Comparison, CtaStrip, ImpactBand, JoinBanner, JsonLd, Partners, ProgramCard, SectionHead, Spotlight, WaysToJoin } from "@/components/Sections";
+import PostCard from "@/components/PostCard";
 import Testimonials from "@/components/Testimonials";
 import { howItWorks, methods, programs, site, values } from "@/lib/content";
+import { posts } from "@/lib/posts";
 
 export default function Home() {
   return (
@@ -125,6 +127,20 @@ export default function Home() {
         <div className="wrap">
           <SectionHead eyebrow="Testimonials" title={<span id="t-h">What schools, officials and parents say</span>} />
           <Testimonials />
+        </div>
+      </section>
+
+      <section className="section bg-white" aria-labelledby="blog-h">
+        <div className="wrap">
+          <SectionHead eyebrow="From the blog" title={<span id="blog-h">Money tips teens actually read</span>} />
+          <div className="grid g3">
+            {posts.slice(0, 3).map((p) => (
+              <PostCard key={p.slug} p={p} />
+            ))}
+          </div>
+          <p className="center mt">
+            <Link className="link-arrow" href="/blog">All articles →</Link>
+          </p>
         </div>
       </section>
 

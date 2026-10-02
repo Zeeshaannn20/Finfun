@@ -1,9 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 import type { Category, Post } from "@/lib/posts";
-import Img from "./Img";
+import PostCard from "./PostCard";
 
 const CATS: ("All" | Category)[] = ["All", "Parents", "Teachers", "Money basics"];
 
@@ -21,14 +20,7 @@ export default function BlogList({ posts }: { posts: Post[] }) {
       </div>
       <div className="grid g3" aria-live="polite">
         {list.map((p) => (
-          <Link key={p.slug} href={`/blog/${p.slug}`} className="card post-card">
-            <Img src={p.cover} alt="" sizes="(max-width: 800px) 90vw, 380px" loading="lazy" />
-            <div>
-              <span className="chip white">{p.category}</span>
-              <h3>{p.title}</h3>
-              <p>{p.excerpt}</p>
-            </div>
-          </Link>
+          <PostCard key={p.slug} p={p} />
         ))}
       </div>
     </>

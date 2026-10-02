@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { classroom, comparison, impact, partners, spotlight, waysToJoin, type Program } from "@/lib/content";
+import { Arrow, Dots, ScribbleCircle, Spark } from "./Doodles";
 import Img from "./Img";
 
 export function SectionHead({ eyebrow, title, children, left }: { eyebrow?: string; title: ReactNode; children?: ReactNode; left?: boolean }) {
@@ -91,29 +92,48 @@ export function Classroom() {
 
 export function JoinBanner({ title = "Ready to become money smart?", text = "Bring FinFun to your school, or enrol your teen today.", audience = "both" }: { title?: string; text?: string; audience?: "both" | "parents" | "schools" }) {
   return (
-    <section className="section tight">
-      <div className="wrap">
-        <div className="join">
-          <div>
-            <h2>{title}</h2>
-            <p>{text}</p>
-            <div className="btn-row">
-              {audience !== "parents" && (
-                <Link className="btn btn-lg" href={audience === "schools" ? "/schools#partner" : "/schools"} data-track="partner_click">
-                  {audience === "schools" ? "Partner with us" : "For Schools"}
-                </Link>
-              )}
-              {audience !== "schools" && (
-                <Link className="btn btn-white btn-lg" href={audience === "parents" ? "/enrol" : "/parents"} data-track="enrol_click">
-                  {audience === "parents" ? "Enrol now" : "For Parents"}
-                </Link>
-              )}
-            </div>
+    <section className="section tight cta-band">
+      <Dots className="cta-dots" />
+      <div className="wrap cta-grid">
+        <div className="cta-text">
+          <ScribbleCircle className="cta-circle" />
+          <h2>{title}</h2>
+          <p>{text}</p>
+          <div className="btn-row">
+            {audience !== "parents" && (
+              <Link className="btn btn-blue btn-lg" href={audience === "schools" ? "/schools#partner" : "/schools"} data-track="partner_click">
+                {audience === "schools" ? "Partner with us" : "For Schools"}
+              </Link>
+            )}
+            {audience !== "schools" && (
+              <Link className="btn btn-lg" href={audience === "parents" ? "/enrol" : "/parents"} data-track="enrol_click">
+                {audience === "parents" ? "Enrol now" : "For Parents"}
+              </Link>
+            )}
           </div>
-          <Img src="/a/mascot-poses/mascot-celebrate.webp" alt="" sizes="210px" loading="lazy" />
         </div>
+        <LetsLockup />
       </div>
     </section>
+  );
+}
+
+/** Mascot holding up a fan of money cards, with a hand-lettered “let’s get money smart”. */
+export function LetsLockup({ small }: { small?: boolean }) {
+  return (
+    <div className={`lockup${small ? " small" : ""}`} aria-hidden="true">
+      <div className="lockup-art">
+        <Img src="/a/mascot-poses/mascot-celebrate.webp" alt="" sizes="220px" loading="lazy" />
+        <div className="fan">
+          <span className="fan-card c1">₹</span>
+          <span className="fan-card c2">%</span>
+          <span className="fan-card c3">★</span>
+        </div>
+      </div>
+      <p className="lockup-word">
+        <span className="lets">let’s</span> <span className="loud">GET MONEY SMART</span>
+      </p>
+    </div>
   );
 }
 
@@ -202,13 +222,30 @@ export function Comparison() {
   return (
     <section className="section bg-white" aria-labelledby="cmp-h">
       <div className="wrap">
-        <SectionHead eyebrow="Why it works" title={<span id="cmp-h">A money lesson vs. <span className="mark">a FinFun session</span></span>}>
-          Most money lessons rely on slides and definitions. FinFun turns them into something teens do.
-        </SectionHead>
+        <div className="sk-head">
+          <span className="eyebrow">Why it works</span>
+          <h2 id="cmp-h">
+            <Spark className="sk-spark l" />
+            <span className="sk-big">Difference</span>
+            <Spark className="sk-spark r" />
+            <span className="sk-between">between a typical money lesson and FinFun</span>
+          </h2>
+          <div className="sk-labels" aria-hidden="true">
+            <div className="sk-label">
+              <Img src="/a/mascot-poses/mascot-think.webp" alt="" sizes="90px" loading="lazy" />
+              <span className="sk-tag">Typical lesson</span>
+            </div>
+            <Arrow className="sk-arrow l" />
+            <Arrow className="sk-arrow r" />
+            <div className="sk-label fun">
+              <span className="sk-tag">FinFun session</span>
+              <Img src="/a/sticker/c08-money-quiz-champ.webp" alt="" sizes="110px" loading="lazy" />
+            </div>
+          </div>
+        </div>
         <div className="sketch-table" role="table" aria-label="Typical money lesson compared with FinFun">
           <div className="st-row st-head" role="row">
-            <span role="columnheader" className="sr-only">Aspect</span>
-            <span role="columnheader" aria-hidden="true" />
+            <span role="columnheader">Aspect</span>
             <span role="columnheader">Typical lesson</span>
             <span role="columnheader">FinFun</span>
           </div>
