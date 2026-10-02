@@ -3,7 +3,10 @@
 
 export const site = {
   name: "FinFun",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.finfun.club", // || (not ??) so an empty env var falls back too
+  // Explicit URL wins; otherwise use the project's *.vercel.app address on Vercel. `||` so empty env vars fall through.
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "https://www.finfun.club"),
   tagline: "Building the future of financial dignity",
   email: "partnerships@finfun.club",
   phone: "+91 97398 85822",
