@@ -44,7 +44,6 @@ export default function Home() {
             <Img className="st sticker float d2" src="/a/sticker/t02-scam-not-today.webp" alt="" priority sizes="(max-width: 860px) 40vw, 240px" />
             <Img className="st sticker float d2" src="/a/sticker/c07-investor-in-training.webp" alt="" sizes="(max-width: 860px) 40vw, 240px" />
             <Img className="st sticker float" src="/a/sticker/t04-start-a-sip-early.webp" alt="" sizes="(max-width: 860px) 40vw, 240px" />
-            <Img className="mascot float" src="/a/mascot-poses/mascot-coin.webp" alt="" sizes="130px" />
           </div>
         </div>
       </section>

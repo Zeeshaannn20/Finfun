@@ -483,47 +483,42 @@ p {
   color: var(--muted);
   font-size: 0.95rem;
 }
+/* 2x2 sticker grid: every sticker (and its caption) fully visible, none overlapping */
 .collage {
   position: relative;
-  aspect-ratio: 1 / 0.92;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(14px, 3vw, 28px);
+  padding: clamp(10px, 3vw, 28px);
   width: 100%;
 }
 .collage-blob {
   position: absolute;
-  inset: 6% 6%;
+  inset: 8%;
   border-radius: 50%;
   background: var(--sky-soft);
   border: var(--line);
+  z-index: -1;
 }
 .collage .st {
-  position: absolute;
-  width: 44%;
+  width: 100%;
+  height: auto;
+  align-self: center;
 }
 .collage .st:nth-of-type(1) {
-  left: 0;
-  top: 2%;
-  transform: rotate(-7deg);
-}
-.collage .st:nth-of-type(2) {
-  right: 0;
-  top: 0;
-  transform: rotate(6deg);
-}
-.collage .st:nth-of-type(3) {
-  left: 4%;
-  bottom: 0;
-  transform: rotate(5deg);
-}
-.collage .st:nth-of-type(4) {
-  right: 2%;
-  bottom: 2%;
   transform: rotate(-5deg);
 }
-.collage .mascot {
-  position: absolute;
-  width: 22%;
-  left: 39%;
-  top: 30%;
+.collage .st:nth-of-type(2) {
+  transform: rotate(4deg);
+}
+.collage .st:nth-of-type(3) {
+  transform: rotate(3deg);
+}
+.collage .st:nth-of-type(4) {
+  transform: rotate(-4deg);
+}
+.collage {
+  isolation: isolate;
 }
 .float {
   animation: float 5s ease-in-out infinite;
@@ -1426,7 +1421,7 @@ p {
   width: clamp(64px, 9vw, 104px);
 }
 .sk-label.fun img {
-  width: clamp(90px, 12vw, 140px);
+  width: clamp(84px, 11vw, 124px);
 }
 .sk-tag {
   font-family: var(--font-caps), cursive;

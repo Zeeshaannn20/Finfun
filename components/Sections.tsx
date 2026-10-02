@@ -239,7 +239,7 @@ export function Comparison() {
             <Arrow className="sk-arrow r" />
             <div className="sk-label fun">
               <span className="sk-tag">FinFun session</span>
-              <Img src="/a/sticker/c08-money-quiz-champ.webp" alt="" sizes="110px" loading="lazy" />
+              <Img src="/a/mascot-poses/mascot-celebrate.webp" alt="" sizes="110px" loading="lazy" />
             </div>
           </div>
         </div>
