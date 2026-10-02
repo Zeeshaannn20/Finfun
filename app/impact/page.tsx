@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ReportForm } from "@/components/Forms";
 import Img from "@/components/Img";
-import { Classroom, ImpactBand, JoinBanner, PageHero, SectionHead } from "@/components/Sections";
+import { Classroom, ImpactBand, JoinBanner, PageHero, SectionHead, Spotlight } from "@/components/Sections";
 import Testimonials from "@/components/Testimonials";
 
 export const metadata: Metadata = {
@@ -22,6 +22,7 @@ export default function Impact() {
     <>
       <PageHero eyebrow="Impact" title={<>Real skills. <span className="mark">Real savings.</span></>} lead="Children in FinFun schools have started saving ₹2,000–6,000 on their own — and thinking about every purchase through the lens of needs and wants." art="/a/sticker/c02-save-first-vibe-later.webp" />
       <ImpactBand title="By the numbers" />
+      <Spotlight />
       <section className="section" aria-labelledby="reach-h">
         <div className="wrap">
           <SectionHead eyebrow="Where we are" title={<span id="reach-h">States and districts reached</span>} />

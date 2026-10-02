@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { classroom, impact, partners, type Program } from "@/lib/content";
+import { classroom, comparison, impact, partners, spotlight, waysToJoin, type Program } from "@/lib/content";
 import Img from "./Img";
 
 export function SectionHead({ eyebrow, title, children, left }: { eyebrow?: string; title: ReactNode; children?: ReactNode; left?: boolean }) {
@@ -177,4 +177,81 @@ export function faqJsonLd(items: { q: string; a: string }[]) {
 
 export function JsonLd({ data }: { data: object }) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, "\\u003c") }} />;
+}
+
+export function Spotlight() {
+  return (
+    <section className="section tight" aria-label="Featured testimonial">
+      <div className="wrap">
+        <figure className="spotlight">
+          <Img src={spotlight.avatar} alt="" sizes="120px" loading="lazy" />
+          <div>
+            <p className="spotlight-head">“{spotlight.headline}”</p>
+            <blockquote>{spotlight.quote}</blockquote>
+            <figcaption>
+              <strong>{spotlight.name}</strong> · {spotlight.role}
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+    </section>
+  );
+}
+
+export function Comparison() {
+  return (
+    <section className="section bg-white" aria-labelledby="cmp-h">
+      <div className="wrap">
+        <SectionHead eyebrow="Why it works" title={<span id="cmp-h">A money lesson vs. <span className="mark">a FinFun session</span></span>}>
+          Most money lessons rely on slides and definitions. FinFun turns them into something teens do.
+        </SectionHead>
+        <div className="sketch-table" role="table" aria-label="Typical money lesson compared with FinFun">
+          <div className="st-row st-head" role="row">
+            <span role="columnheader" className="sr-only">Aspect</span>
+            <span role="columnheader" aria-hidden="true" />
+            <span role="columnheader">Typical lesson</span>
+            <span role="columnheader">FinFun</span>
+          </div>
+          {comparison.rows.map((r) => (
+            <div className="st-row" role="row" key={r.aspect}>
+              <span role="rowheader">{r.aspect}</span>
+              <span role="cell" className="st-old">{r.old}</span>
+              <span role="cell" className="st-fun">{r.fun}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function CtaStrip() {
+  return (
+    <div className="cta-strip">
+      <Link className="btn btn-blue" href="/schools#partner" data-track="partner_click">Book a free demo</Link>
+      <Link className="btn btn-white" href="/programs">See programs</Link>
+      <Link className="btn btn-white" href="/schools#report">Impact report</Link>
+    </div>
+  );
+}
+
+export function WaysToJoin() {
+  return (
+    <section className="section bg-yellow doodle" aria-labelledby="join-h">
+      <div className="wrap">
+        <SectionHead eyebrow="Get involved" title={<span id="join-h">Four ways to join FinFun</span>} />
+        <div className="grid g4">
+          {waysToJoin.map((w) => (
+            <div className={`card way way-${w.color}`} key={w.title}>
+              <span className="way-kicker">{w.kicker}</span>
+              <h3>{w.title}</h3>
+              <p className="way-who">{w.who}</p>
+              <p>{w.text}</p>
+              <Link className="btn btn-sm" href={w.href}>{w.cta}</Link>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }

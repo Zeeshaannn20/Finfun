@@ -1,11 +1,12 @@
 "use client";
 
 import { useRef } from "react";
-import { testimonials, type Testimonial } from "@/lib/content";
+import { spotlight, testimonials, type Testimonial } from "@/lib/content";
 import Img from "./Img";
 
 export default function Testimonials({ groups }: { groups?: Testimonial["group"][] }) {
-  const list = groups ? testimonials.filter((t) => groups.includes(t.group)) : testimonials;
+  // the spotlight quote is shown on its own, so never repeat it in the slider
+  const list = testimonials.filter((t) => t.name !== spotlight.name && (!groups || groups.includes(t.group)));
   const ref = useRef<HTMLDivElement>(null);
   const move = (dir: number) => {
     const el = ref.current;

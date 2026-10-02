@@ -1316,3 +1316,202 @@ p {
   width: 32px;
   height: 32px;
 }
+
+/* ---------- inspired additions: spotlight, sketch table, ways to join, CTA strip ---------- */
+/* irregular radii give boxes a hand-drawn, sketchnote edge */
+.sketchy {
+  border-radius: 255px 18px 225px 18px / 18px 225px 18px 255px;
+}
+
+.spotlight {
+  margin: 0 auto;
+  max-width: 980px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: clamp(20px, 4vw, 44px);
+  align-items: center;
+  background: var(--white);
+  border: var(--line);
+  border-radius: 28px 10px 30px 12px / 12px 30px 10px 28px;
+  box-shadow: 6px 6px 0 var(--yellow), 6px 6px 0 3px var(--ink);
+  padding: clamp(24px, 4vw, 44px);
+}
+.spotlight img {
+  width: clamp(88px, 12vw, 128px);
+  border-radius: 50%;
+  border: var(--line);
+}
+.spotlight-head {
+  font-family: var(--font-hand), cursive;
+  font-size: clamp(1.6rem, 3.6vw, 2.5rem);
+  line-height: 1.2;
+  color: var(--blue);
+  margin-bottom: 12px;
+}
+.spotlight blockquote {
+  margin: 0 0 14px;
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+.spotlight figcaption {
+  font-size: 0.95rem;
+}
+@media (max-width: 640px) {
+  .spotlight {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .spotlight img {
+    margin: 0 auto;
+  }
+}
+
+.sketch-table {
+  max-width: 940px;
+  margin: 0 auto;
+  border: var(--line);
+  border-radius: 22px 8px 24px 10px / 10px 24px 8px 22px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.st-row {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr 1.15fr;
+  border-top: 2px dashed #cfc6ad;
+}
+.st-row > span {
+  padding: 14px 18px;
+}
+.st-row [role="rowheader"] {
+  font-family: var(--font-caps), cursive;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  background: var(--lavender-soft);
+  border-right: 2px solid var(--ink);
+}
+.st-head {
+  border-top: 0;
+  border-bottom: var(--line);
+  font-family: var(--font-caps), cursive;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+}
+.st-head > span:nth-child(2) {
+  background: var(--lavender-soft);
+  border-right: 2px solid var(--ink);
+}
+.st-head > span:nth-child(3) {
+  background: #eee9dc;
+}
+.st-head > span:nth-child(4) {
+  background: var(--yellow);
+}
+.st-head + .st-row {
+  border-top: 0;
+}
+.st-old {
+  color: #6b6b6b;
+  text-decoration: line-through;
+  text-decoration-color: var(--tomato);
+  text-decoration-thickness: 2px;
+}
+.st-fun {
+  font-weight: 800;
+  background: var(--yellow-soft);
+  border-left: 2px solid var(--ink);
+  padding-left: 46px !important;
+  position: relative;
+}
+.st-fun::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--ink);
+  background: var(--green)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3L15 7' fill='none' stroke='%231b1b1b' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    center/100% no-repeat;
+}
+@media (max-width: 640px) {
+  .st-head {
+    display: none;
+  }
+  .st-row {
+    grid-template-columns: 1fr;
+    border-top: var(--line);
+  }
+  .st-row:first-of-type {
+    border-top: 0;
+  }
+  .st-row [role="rowheader"] {
+    border-right: 0;
+    border-bottom: 2px solid var(--ink);
+  }
+  .st-old::before {
+    content: "Typical:";
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 6px;
+    font-weight: 700;
+  }
+  .st-fun {
+    border-left: 0;
+    border-top: 2px dashed #cfc6ad;
+  }
+}
+
+.cta-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-top: clamp(32px, 5vw, 48px);
+}
+
+.way {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top-width: 10px;
+}
+.way h3 {
+  margin: 4px 0 0;
+}
+.way p {
+  margin: 0;
+  color: var(--muted);
+}
+.way .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+.way p:last-of-type {
+  margin-bottom: 16px;
+}
+.way-kicker {
+  font-family: var(--font-caps), cursive;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  color: #b8401c; /* darker tomato: passes AA contrast on white */
+}
+.way-who {
+  font-weight: 800;
+  color: var(--blue) !important;
+  font-size: 0.95rem;
+}
+.way-sky {
+  border-top-color: var(--sky);
+}
+.way-lavender {
+  border-top-color: var(--lavender);
+}
+.way-green {
+  border-top-color: var(--green);
+}
+.way-pink {
+  border-top-color: var(--pink);
+}

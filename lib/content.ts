@@ -287,3 +287,30 @@ export const team = [
   { name: "Partnerships", role: "Schools & CSR", avatar: "/a/testimonials-and-team/avatar-csr-professional.webp" },
   { name: "Volunteers", role: "Community outreach", avatar: "/a/testimonials-and-team/avatar-volunteer.webp" },
 ];
+
+export const spotlight = {
+  headline: "Children have started saving ₹2,000–6,000",
+  quote:
+    "FinFun’s 2-year pilot at Government Aradeshanahalli school has been transformational for our 6th and 7th graders. Spending now has a lens of need and want.",
+  name: "Keshav Murthy",
+  role: "CSR, Bengaluru Airport",
+  avatar: "/a/testimonials-and-team/avatar-csr-professional.webp",
+};
+
+export const comparison = {
+  rows: [
+    { aspect: "Focus", old: "Memorising definitions", fun: "Using money in real situations" },
+    { aspect: "Method", old: "Lectures and textbooks", fun: "Games, role-play, quizzes and stories" },
+    { aspect: "Student role", old: "Listen and copy notes", fun: "Play, compete and decide" },
+    { aspect: "Topics", old: "Abstract theory", fun: "UPI, scams, SIPs, side hustles" },
+    { aspect: "Result", old: "Forgotten after the exam", fun: "Habits — and real savings" },
+    { aspect: "Measured by", old: "Nothing", fun: "Rubric evaluation and an impact report" },
+  ],
+};
+
+export const waysToJoin = [
+  { kicker: "Schools", title: "Partner School", who: "For principals & trustees", text: "Run FinFun in grades 6–10 with trained teachers, kits and competitions.", cta: "Book a demo", href: "/schools#partner", color: "sky" },
+  { kicker: "CSR & Government", title: "Impact Partner", who: "For CSR heads & education departments", text: "Fund FinFun at scale and get measured outcomes in an impact report.", cta: "Get the report", href: "/schools#report", color: "lavender" },
+  { kicker: "Teachers", title: "FinFun Teacher", who: "For teachers in partner schools", text: "Get trained to lead sessions — plus personal finance training for you.", cta: "Ask about training", href: "/contact", color: "green" },
+  { kicker: "Parents", title: "FinFun Family", who: "For parents of grades 6–10", text: "Enrol your teen in Pro or Advantage — live, online, game-based.", cta: "Enrol your teen", href: "/enrol", color: "pink" },
+];

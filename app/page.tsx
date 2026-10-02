@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Img from "@/components/Img";
-import { Classroom, ImpactBand, JoinBanner, JsonLd, Partners, ProgramCard, SectionHead } from "@/components/Sections";
+import { Classroom, Comparison, CtaStrip, ImpactBand, JoinBanner, JsonLd, Partners, ProgramCard, SectionHead, Spotlight, WaysToJoin } from "@/components/Sections";
 import Testimonials from "@/components/Testimonials";
 import { howItWorks, methods, programs, site, values } from "@/lib/content";
 
@@ -48,6 +48,7 @@ export default function Home() {
       </section>
 
       <ImpactBand />
+      <Spotlight />
 
       <section className="section" aria-labelledby="why-h">
         <div className="wrap">
@@ -64,7 +65,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section bg-white" aria-labelledby="how-h">
+      <Comparison />
+
+      <section className="section" aria-labelledby="how-h">
         <div className="wrap">
           <SectionHead eyebrow="How it works" title={<span id="how-h">Learn → Play → Grow</span>} />
           <div className="steps">
@@ -80,7 +83,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section" aria-labelledby="methods-h">
+      <section className="section bg-white" aria-labelledby="methods-h">
         <div className="wrap">
           <SectionHead eyebrow="Gamified learning" title={<span id="methods-h">Four ways teens learn with FinFun</span>} />
           <div className="grid g4">
@@ -94,6 +97,7 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <CtaStrip />
         </div>
       </section>
 
@@ -125,6 +129,7 @@ export default function Home() {
       </section>
 
       <Classroom />
+      <WaysToJoin />
       <JoinBanner />
     </>
   );

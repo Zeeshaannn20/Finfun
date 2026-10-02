@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PartnershipForm, ReportForm } from "@/components/Forms";
 import Img from "@/components/Img";
-import { Faq, ImpactBand, JsonLd, PageHero, Partners, SectionHead, faqJsonLd } from "@/components/Sections";
+import { Comparison, Faq, ImpactBand, JsonLd, PageHero, Partners, SectionHead, Spotlight, faqJsonLd } from "@/components/Sections";
 import Testimonials from "@/components/Testimonials";
 import { journey, partnershipSteps, schoolFaq } from "@/lib/content";
 
@@ -66,7 +66,9 @@ export default function Schools() {
         </div>
       </section>
 
+      <Comparison />
       <ImpactBand title="Proven at scale" />
+      <Spotlight />
       <Partners />
 
       <section className="section" aria-labelledby="off-h">
