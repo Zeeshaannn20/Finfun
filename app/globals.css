@@ -1298,14 +1298,6 @@ p {
   }
 }
 
-.cta-strip {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  justify-content: center;
-  margin-top: clamp(32px, 5vw, 48px);
-}
-
 .way {
   display: flex;
   flex-direction: column;
@@ -1701,4 +1693,22 @@ p {
 }
 .post-card:hover .read-more {
   color: var(--blue);
+}
+
+/* ---------- section CTA row (ends every section with a next step) ---------- */
+.section-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-top: clamp(28px, 4vw, 44px);
+}
+.split .section-cta,
+.left .section-cta {
+  justify-content: flex-start;
+}
+@media (max-width: 560px) {
+  .section-cta .btn {
+    flex: 1 1 100%;
+  }
 }

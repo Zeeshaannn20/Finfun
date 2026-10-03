@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PartnershipForm, ReportForm } from "@/components/Forms";
 import Img from "@/components/Img";
-import { Comparison, Faq, ImpactBand, JsonLd, PageHero, Partners, SectionHead, Spotlight, faqJsonLd } from "@/components/Sections";
+import { CTA, Comparison, Faq, ImpactBand, JsonLd, PageHero, Partners, SectionCta, SectionHead, Spotlight, faqJsonLd } from "@/components/Sections";
 import Testimonials from "@/components/Testimonials";
 import { journey, partnershipSteps, schoolFaq } from "@/lib/content";
 
@@ -47,6 +47,7 @@ export default function Schools() {
               </div>
             ))}
           </div>
+          <SectionCta links={[CTA.partner, CTA.report]} />
         </div>
       </section>
 
@@ -63,18 +64,20 @@ export default function Schools() {
               </div>
             ))}
           </div>
+          <SectionCta links={[CTA.demo]} />
         </div>
       </section>
 
-      <Comparison />
+      <Comparison cta={[CTA.demo, CTA.report]} />
       <ImpactBand title="Proven at scale" />
-      <Spotlight />
+      <Spotlight cta={[CTA.partner]} />
       <Partners />
 
       <section className="section" aria-labelledby="off-h">
         <div className="wrap">
           <SectionHead eyebrow="From our partners" title={<span id="off-h">Hear it from officials and school leaders</span>} />
           <Testimonials groups={["official", "school", "teacher"]} />
+          <SectionCta links={[CTA.partner]} />
         </div>
       </section>
 

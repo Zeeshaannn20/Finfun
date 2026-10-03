@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Img from "@/components/Img";
-import { Faq, JoinBanner, JsonLd, PageHero, SectionHead, faqJsonLd, inr } from "@/components/Sections";
+import { Faq, JoinBanner, JsonLd, PageHero, SectionCta, SectionHead, faqJsonLd, inr } from "@/components/Sections";
 import { getProgram, parentFaq, programs, site } from "@/lib/content";
 
 export const dynamicParams = false;
@@ -54,6 +54,7 @@ export default async function ProgramPage({ params }: PageProps<"/programs/[slug
               </div>
             ))}
           </div>
+          <SectionCta links={[{ label: `Enrol in ${p.name.replace("FinFun ", "")}`, href: `/enrol?program=${p.slug}` }]} />
         </div>
       </section>
 
@@ -67,6 +68,7 @@ export default async function ProgramPage({ params }: PageProps<"/programs/[slug
               ))}
               <li>Batch timings shared at enrolment — choose what fits your teen’s week</li>
             </ul>
+            <SectionCta links={[{ label: "Enrol now", href: `/enrol?program=${p.slug}` }, { label: "Ask a question", href: "/contact", tone: "white" }]} />
           </div>
           <Img className="banner-img" src="/a/about-and-programs/learning-kit-illustration-1200x800.webp" alt="Sample of the FinFun learning kit" sizes="(max-width: 860px) 90vw, 560px" loading="lazy" />
         </div>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ReportForm } from "@/components/Forms";
 import Img from "@/components/Img";
-import { Classroom, ImpactBand, JoinBanner, PageHero, SectionHead, Spotlight } from "@/components/Sections";
+import { CTA, Classroom, ImpactBand, JoinBanner, PageHero, SectionCta, SectionHead, Spotlight } from "@/components/Sections";
 import Testimonials from "@/components/Testimonials";
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export default function Impact() {
   return (
     <>
       <PageHero eyebrow="Impact" title={<>Real skills. <span className="mark">Real savings.</span></>} lead="Children in FinFun schools have started saving ₹2,000–6,000 on their own — and thinking about every purchase through the lens of needs and wants." art="/a/sticker/08-goal-reached.webp" />
-      <ImpactBand title="By the numbers" />
+      <ImpactBand title="By the numbers" cta={[{ ...CTA.report, href: "#report", tone: "yellow" }]} />
       <Spotlight />
       <section className="section" aria-labelledby="reach-h">
         <div className="wrap">
@@ -34,6 +34,7 @@ export default function Impact() {
               </div>
             ))}
           </div>
+          <SectionCta links={[CTA.partner]} />
         </div>
       </section>
       <section className="section tight bg-white">
@@ -42,7 +43,7 @@ export default function Impact() {
         </div>
       </section>
       <Classroom />
-      <section className="section bg-yellow" aria-labelledby="dl-h">
+      <section id="report" className="section bg-yellow" aria-labelledby="dl-h">
         <div className="wrap split">
           <Img className="banner-img" src="/a/impact/impact-report-cover-A4.webp" alt="Cover of the FinFun impact report" sizes="(max-width: 860px) 80vw, 420px" loading="lazy" style={{ maxWidth: 380, justifySelf: "center" }} />
           <div className="card">
@@ -56,6 +57,7 @@ export default function Impact() {
         <div className="wrap">
           <SectionHead eyebrow="In the media & from partners" title={<span id="media-h">What people are saying</span>} />
           <Testimonials groups={["official", "school"]} />
+          <SectionCta links={[CTA.partner]} />
         </div>
       </section>
       <JoinBanner audience="schools" title="Fund or bring FinFun to more schools" text="Talk to our partnerships team about CSR and government programs." />

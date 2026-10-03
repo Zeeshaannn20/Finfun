@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Img from "@/components/Img";
-import { Classroom, Comparison, CtaStrip, ImpactBand, JoinBanner, JsonLd, Partners, ProgramCard, SectionHead, Spotlight, WaysToJoin } from "@/components/Sections";
+import { CTA, Classroom, Comparison, ImpactBand, JoinBanner, JsonLd, Partners, ProgramCard, SectionCta, SectionHead, Spotlight, WaysToJoin } from "@/components/Sections";
 import PostCard from "@/components/PostCard";
 import Testimonials from "@/components/Testimonials";
 import { howItWorks, methods, programs, site, values } from "@/lib/content";
@@ -72,6 +72,7 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <SectionCta links={[CTA.programs, CTA.partner]} />
         </div>
       </section>
 
@@ -90,6 +91,7 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <SectionCta links={[CTA.enrol, CTA.demo]} />
         </div>
       </section>
 
@@ -107,7 +109,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <CtaStrip />
+          <SectionCta links={[CTA.demo, CTA.programs, { ...CTA.report, tone: "white" }]} />
         </div>
       </section>
 
@@ -135,6 +137,7 @@ export default function Home() {
         <div className="wrap">
           <SectionHead eyebrow="Testimonials" title={<span id="t-h">What schools, officials and parents say</span>} />
           <Testimonials />
+          <SectionCta links={[CTA.partner, CTA.enrol]} />
         </div>
       </section>
 
@@ -146,9 +149,7 @@ export default function Home() {
               <PostCard key={p.slug} p={p} />
             ))}
           </div>
-          <p className="center mt">
-            <Link className="link-arrow" href="/blog">All articles →</Link>
-          </p>
+          <SectionCta links={[{ label: "Read all articles", href: "/blog", tone: "white" }, CTA.enrol]} />
         </div>
       </section>
 

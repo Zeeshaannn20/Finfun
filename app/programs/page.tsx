@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Img from "@/components/Img";
-import { JoinBanner, PageHero, ProgramCard, SectionHead, inr } from "@/components/Sections";
+import { CTA, JoinBanner, PageHero, ProgramCard, SectionCta, SectionHead, inr } from "@/components/Sections";
 import { programs } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -54,6 +54,7 @@ export default function Programs() {
               </tbody>
             </table>
           </div>
+          <SectionCta links={[{ label: "Enrol in Pro", href: "/enrol?program=pro" }, { label: "Enrol in Advantage", href: "/enrol?program=advantage", tone: "yellow" }]} />
         </div>
       </section>
       <section className="section" aria-labelledby="kit-h">
@@ -63,6 +64,7 @@ export default function Programs() {
             <SectionHead left eyebrow="Included" title={<span id="kit-h">Every program comes with a learning kit</span>}>
               Money cards, games and story sheets that turn every session into play — and keep the learning going at home.
             </SectionHead>
+            <SectionCta links={[CTA.enrol]} />
           </div>
         </div>
       </section>

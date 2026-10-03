@@ -4,6 +4,32 @@ import { classroom, comparison, impact, partners, spotlight, waysToJoin, type Pr
 import { Arrow, Dots, ScribbleCircle, Spark } from "./Doodles";
 import Img from "./Img";
 
+export type CtaLink = { label: string; href: string; tone?: "blue" | "yellow" | "white" };
+
+const trackFor = (href: string) => (href.startsWith("/enrol") ? "enrol_click" : href.includes("#partner") ? "partner_click" : "cta_click");
+
+/** Centered button row that closes a section, so every screen ends with a next step. */
+export function SectionCta({ links }: { links: CtaLink[] }) {
+  return (
+    <div className="section-cta">
+      {links.map((l, i) => (
+        <Link key={l.href + l.label} className={`btn ${l.tone === "white" ? "btn-white" : l.tone === "yellow" || (!l.tone && i > 0) ? "" : "btn-blue"}`} href={l.href} data-track={trackFor(l.href)}>
+          {l.label}
+        </Link>
+      ))}
+    </div>
+  );
+}
+
+export const CTA = {
+  partner: { label: "Partner with us", href: "/schools#partner" },
+  demo: { label: "Request a demo", href: "/schools#partner" },
+  enrol: { label: "Enrol your teen", href: "/enrol" },
+  programs: { label: "See programs & prices", href: "/programs" },
+  impact: { label: "See our full impact", href: "/impact" },
+  report: { label: "Get the impact report", href: "/schools#report" },
+} satisfies Record<string, CtaLink>;
+
 export function SectionHead({ eyebrow, title, children, left }: { eyebrow?: string; title: ReactNode; children?: ReactNode; left?: boolean }) {
   return (
     <div className={`section-head${left ? " left" : ""}`}>
@@ -30,7 +56,7 @@ export function PageHero({ eyebrow, title, lead, art, artAlt = "", children, ton
   );
 }
 
-export function ImpactBand({ title = "Our impact so far" }: { title?: string }) {
+export function ImpactBand({ title = "Our impact so far", cta = [{ ...CTA.impact, tone: "yellow" }] }: { title?: string; cta?: CtaLink[] | null }) {
   return (
     <section className="impact section tight" aria-labelledby="impact-h">
       <div className="wrap">
@@ -44,12 +70,13 @@ export function ImpactBand({ title = "Our impact so far" }: { title?: string }) 
             </div>
           ))}
         </div>
+        {cta && <SectionCta links={cta} />}
       </div>
     </section>
   );
 }
 
-export function Partners() {
+export function Partners({ cta = [CTA.partner] }: { cta?: CtaLink[] | null } = {}) {
   return (
     <section className="section tight bg-white" aria-labelledby="partners-h">
       <div className="wrap">
@@ -65,12 +92,13 @@ export function Partners() {
             </li>
           ))}
         </ul>
+        {cta && <SectionCta links={cta} />}
       </div>
     </section>
   );
 }
 
-export function Classroom() {
+export function Classroom({ cta = [CTA.demo, CTA.enrol] }: { cta?: CtaLink[] | null } = {}) {
   return (
     <section className="section" aria-labelledby="class-h">
       <div className="wrap">
@@ -85,6 +113,7 @@ export function Classroom() {
             </figure>
           ))}
         </div>
+        {cta && <SectionCta links={cta} />}
       </div>
     </section>
   );
@@ -194,7 +223,7 @@ export function JsonLd({ data }: { data: object }) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, "\\u003c") }} />;
 }
 
-export function Spotlight() {
+export function Spotlight({ cta = [CTA.partner, CTA.report] }: { cta?: CtaLink[] | null } = {}) {
   return (
     <section className="section tight" aria-label="Featured testimonial">
       <div className="wrap">
@@ -208,12 +237,13 @@ export function Spotlight() {
             </figcaption>
           </div>
         </figure>
+        {cta && <SectionCta links={cta} />}
       </div>
     </section>
   );
 }
 
-export function Comparison() {
+export function Comparison({ cta = [CTA.demo, CTA.enrol] }: { cta?: CtaLink[] | null } = {}) {
   return (
     <section className="section bg-white" aria-labelledby="cmp-h">
       <div className="wrap">
@@ -252,18 +282,9 @@ export function Comparison() {
             </div>
           ))}
         </div>
+        {cta && <SectionCta links={cta} />}
       </div>
     </section>
-  );
-}
-
-export function CtaStrip() {
-  return (
-    <div className="cta-strip">
-      <Link className="btn btn-blue" href="/schools#partner" data-track="partner_click">Book a free demo</Link>
-      <Link className="btn btn-white" href="/programs">See programs</Link>
-      <Link className="btn btn-white" href="/schools#report">Impact report</Link>
-    </div>
   );
 }
 

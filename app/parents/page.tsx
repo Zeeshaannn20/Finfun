@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Img from "@/components/Img";
-import { Faq, JoinBanner, JsonLd, PageHero, ProgramCard, SectionHead, faqJsonLd } from "@/components/Sections";
+import { CTA, Faq, JoinBanner, JsonLd, PageHero, ProgramCard, SectionCta, SectionHead, faqJsonLd } from "@/components/Sections";
 import Testimonials from "@/components/Testimonials";
 import { parentFaq, parentTopics, programs } from "@/lib/content";
 
@@ -47,6 +47,7 @@ export default function Parents() {
               </div>
             ))}
           </div>
+          <SectionCta links={[{ ...CTA.programs, href: "#programs" }, CTA.enrol]} />
         </div>
       </section>
 
@@ -62,6 +63,7 @@ export default function Parents() {
               <li>Tell a parent and report the number.</li>
             </ul>
             <p className="muted mt">Every FinFun session is built from activities like this — quick, real and game-based.</p>
+            <SectionCta links={[CTA.enrol]} />
           </div>
           <Img className="sticker" src="/a/sticker/09-scam-alert.webp" alt="Sticker of a phone asking for an OTP with a warning sign: Scam alert!" sizes="(max-width: 860px) 80vw, 460px" loading="lazy" style={{ maxWidth: 420, justifySelf: "center" }} />
         </div>
@@ -82,6 +84,7 @@ export default function Parents() {
         <div className="wrap">
           <SectionHead eyebrow="Parents & teachers" title={<span id="pt-h">Families who’ve seen the change</span>} />
           <Testimonials groups={["parent", "teacher"]} />
+          <SectionCta links={[CTA.enrol]} />
         </div>
       </section>
 
@@ -89,9 +92,7 @@ export default function Parents() {
         <div className="wrap">
           <SectionHead eyebrow="FAQ" title={<span id="faq-h">Questions parents ask</span>} />
           <Faq items={parentFaq} />
-          <p className="center mt">
-            Still unsure? <Link href="/contact">Ask us a question</Link> or chat on WhatsApp.
-          </p>
+          <SectionCta links={[CTA.enrol, { label: "Ask us a question", href: "/contact", tone: "white" }]} />
         </div>
       </section>
 
