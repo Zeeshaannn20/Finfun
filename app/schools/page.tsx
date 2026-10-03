@@ -20,7 +20,7 @@ export default function Schools() {
         eyebrow="For principals, trustees & CSR partners"
         title={<>Bring financial literacy to <span className="mark">your school</span></>}
         lead="A ready-to-run program for grades 6 to 10 — trained teachers, learning kits, competitions and measurable impact. Already in 35,000+ schools."
-        art="/a/sticker/c08-money-quiz-champ.webp"
+        art="/a/sticker/07-money-coach.webp"
         tone="bg-sky"
       >
         <div className="btn-row">

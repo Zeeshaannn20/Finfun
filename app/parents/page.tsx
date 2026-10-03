@@ -19,7 +19,7 @@ export default function Parents() {
         eyebrow="For parents of grades 6–10"
         title={<>Raise a <span className="mark">money-smart</span> teen</>}
         lead="Your teen already uses UPI and shops online. FinFun teaches them to budget, save, spot scams and start investing — through games they actually look forward to."
-        art="/a/sticker/c12-talk-money-at-home.webp"
+        art="/a/sticker/07-family-budget.webp"
         artAlt=""
         tone="bg-pink"
       >
@@ -63,7 +63,7 @@ export default function Parents() {
             </ul>
             <p className="muted mt">Every FinFun session is built from activities like this — quick, real and game-based.</p>
           </div>
-          <Img className="sticker" src="/a/sticker/t02-scam-not-today.webp" alt="Sticker of a phone showing a fake ‘You won ₹10,000’ message with a red cross: Not today!" sizes="(max-width: 860px) 80vw, 460px" loading="lazy" style={{ maxWidth: 420, justifySelf: "center" }} />
+          <Img className="sticker" src="/a/sticker/09-scam-alert.webp" alt="Sticker of a phone asking for an OTP with a warning sign: Scam alert!" sizes="(max-width: 860px) 80vw, 460px" loading="lazy" style={{ maxWidth: 420, justifySelf: "center" }} />
         </div>
       </section>
 

@@ -14,7 +14,7 @@ export default async function ThankYou({ searchParams }: PageProps<"/thank-you">
   const { from } = await searchParams;
   const [title, text] = copy[String(from)] ?? ["Thank you!", "We got your message. We’ll get back to you soon."];
   return (
-    <Utility img="/a/mascot-poses/mascot-thanks.webp" title={title}
+    <Utility img="/a/sticker/05-rupi-approves.webp" title={title}
       actions={<><Link className="btn btn-lg" href="/">Back to home</Link><Link className="btn btn-white btn-lg" href="/blog">Read money tips</Link></>}>
       <p>{text}</p>
     </Utility>

@@ -5,7 +5,7 @@ export const metadata: Metadata = { title: "Coming soon", robots: { index: false
 
 export default function ComingSoon() {
   return (
-    <Utility img="/a/mascot-poses/mascot-read.webp" title="Coming soon">
+    <Utility img="/a/sticker/05-hi-im-finbot.webp" title="Coming soon">
       <p>New money games are on the way!</p>
     </Utility>
   );

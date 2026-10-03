@@ -20,7 +20,7 @@ const reach = [
 export default function Impact() {
   return (
     <>
-      <PageHero eyebrow="Impact" title={<>Real skills. <span className="mark">Real savings.</span></>} lead="Children in FinFun schools have started saving ₹2,000–6,000 on their own — and thinking about every purchase through the lens of needs and wants." art="/a/sticker/c02-save-first-vibe-later.webp" />
+      <PageHero eyebrow="Impact" title={<>Real skills. <span className="mark">Real savings.</span></>} lead="Children in FinFun schools have started saving ₹2,000–6,000 on their own — and thinking about every purchase through the lens of needs and wants." art="/a/sticker/08-goal-reached.webp" />
       <ImpactBand title="By the numbers" />
       <Spotlight />
       <section className="section" aria-labelledby="reach-h">

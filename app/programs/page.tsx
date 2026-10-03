@@ -21,7 +21,7 @@ export default function Programs() {
   ];
   return (
     <>
-      <PageHero eyebrow="Programs" title={<>Two programs. <span className="mark">One goal.</span></>} lead="Money-smart teens. Pick the program that matches your teen’s grade." art="/a/sticker/t16-money-mindset.webp" />
+      <PageHero eyebrow="Programs" title={<>Two programs. <span className="mark">One goal.</span></>} lead="Money-smart teens. Pick the program that matches your teen’s grade." art="/a/sticker/12-money-fun.webp" />
       <section className="section">
         <div className="wrap">
           <div className="grid g2">

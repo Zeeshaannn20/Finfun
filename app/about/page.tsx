@@ -26,7 +26,7 @@ export default function About() {
             <p>Most of us learn about money the hard way — through a scam, a debt or a missed chance to save. FinFun exists so the next generation doesn’t have to.</p>
             <p>We turn money skills into games, stories and challenges that teens in grades 6 to 10 genuinely enjoy, and we train teachers so every school can run them — government and private, English and vernacular.</p>
           </div>
-          <Img className="sticker" src="/a/mascot-poses/mascot-hero.webp" alt="" sizes="300px" loading="lazy" style={{ maxWidth: 280, justifySelf: "center" }} />
+          <Img className="sticker" src="/a/sticker/06-super-saver.webp" alt="" sizes="300px" loading="lazy" style={{ maxWidth: 280, justifySelf: "center" }} />
         </div>
       </section>
 

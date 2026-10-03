@@ -7,7 +7,7 @@ export const metadata: Metadata = { title: "Login", description: "Log in to your
 
 export default function Login() {
   return (
-    <Utility img="/a/mascot-poses/mascot-point.webp" title="Log in to FinFun"
+    <Utility img="/a/sticker/10-hi-im-rupi.webp" title="Log in to FinFun"
       actions={
         <>
           {site.loginUrl ? (

@@ -179,153 +179,169 @@
   1240,
   1754
  ],
- "/a/mascot-poses/mascot-celebrate.webp": [
+ "/a/logo.webp": [
+  298,
+  76
+ ],
+ "/a/sticker/01-save-it.webp": [
   480,
-  534
+  508
  ],
- "/a/mascot-poses/mascot-coin.webp": [
+ "/a/sticker/01-sip-every-month.webp": [
   480,
-  587
+  508
  ],
- "/a/mascot-poses/mascot-hero.webp": [
-  794,
-  907
- ],
- "/a/mascot-poses/mascot-lost.webp": [
+ "/a/sticker/01-the-entrepreneur.webp": [
   480,
-  594
+  525
  ],
- "/a/mascot-poses/mascot-point.webp": [
+ "/a/sticker/01-the-saver.webp": [
   480,
-  577
+  525
  ],
- "/a/mascot-poses/mascot-read.webp": [
+ "/a/sticker/02-money-grows.webp": [
   480,
-  881
+  508
  ],
- "/a/mascot-poses/mascot-thanks.webp": [
+ "/a/sticker/02-own-a-slice.webp": [
   480,
-  604
+  508
  ],
- "/a/mascot-poses/mascot-think.webp": [
+ "/a/sticker/02-scam-spotter.webp": [
   480,
-  672
+  525
  ],
- "/a/mascot-poses/mascot-wave.webp": [
+ "/a/sticker/02-the-budgeter.webp": [
   480,
-  663
+  525
  ],
- "/a/sticker/c01-pay-smart-not-fast.webp": [
-  560,
-  526
+ "/a/sticker/03-budget-boss.webp": [
+  480,
+  508
  ],
- "/a/sticker/c02-save-first-vibe-later.webp": [
-  560,
-  522
+ "/a/sticker/03-prices-rise.webp": [
+  480,
+  508
  ],
- "/a/sticker/c03-my-first-paycheck.webp": [
-  560,
-  569
+ "/a/sticker/03-the-investor.webp": [
+  480,
+  525
  ],
- "/a/sticker/c04-never-share-otp.webp": [
-  560,
-  532
+ "/a/sticker/03-wait-24-hours.webp": [
+  480,
+  525
  ],
- "/a/sticker/c05-do-i-really-need-it.webp": [
-  560,
-  567
+ "/a/sticker/04-bank-buddy.webp": [
+  480,
+  508
  ],
- "/a/sticker/c06-split-it-fair.webp": [
-  560,
-  531
+ "/a/sticker/04-dadis-gullak.webp": [
+  480,
+  525
  ],
- "/a/sticker/c07-investor-in-training.webp": [
-  560,
-  539
+ "/a/sticker/04-goal-set.webp": [
+  480,
+  508
  ],
- "/a/sticker/c08-money-quiz-champ.webp": [
-  560,
-  541
+ "/a/sticker/04-smart-spender.webp": [
+  480,
+  525
  ],
- "/a/sticker/c09-my-first-debit-card.webp": [
-  560,
-  494
+ "/a/sticker/05-earn-interest.webp": [
+  480,
+  508
  ],
- "/a/sticker/c10-read-learn-invest.webp": [
-  560,
-  509
+ "/a/sticker/05-hi-im-finbot.webp": [
+  480,
+  525
  ],
- "/a/sticker/c11-saving-for-my-laptop.webp": [
-  560,
-  481
+ "/a/sticker/05-rupi-approves.webp": [
+  480,
+  525
  ],
- "/a/sticker/c12-talk-money-at-home.webp": [
-  560,
-  507
+ "/a/sticker/05-spend-smart.webp": [
+  480,
+  508
  ],
- "/a/sticker/t01-scan-smart.webp": [
-  560,
-  693
+ "/a/sticker/06-borrow-smart.webp": [
+  480,
+  508
  ],
- "/a/sticker/t02-scam-not-today.webp": [
-  560,
-  659
+ "/a/sticker/06-need-or-want.webp": [
+  480,
+  508
  ],
- "/a/sticker/t03-let-it-compound.webp": [
-  560,
-  495
+ "/a/sticker/06-rupi-thinks.webp": [
+  480,
+  525
  ],
- "/a/sticker/t04-start-a-sip-early.webp": [
-  560,
-  551
+ "/a/sticker/06-super-saver.webp": [
+  480,
+  525
  ],
- "/a/sticker/t05-inflation-is-real.webp": [
-  560,
-  544
+ "/a/sticker/07-emergency-jar.webp": [
+  480,
+  508
  ],
- "/a/sticker/t06-50-30-20-rule.webp": [
-  560,
-  526
+ "/a/sticker/07-family-budget.webp": [
+  480,
+  525
  ],
- "/a/sticker/t07-emergency-fund.webp": [
-  560,
-  514
+ "/a/sticker/07-money-coach.webp": [
+  480,
+  525
  ],
- "/a/sticker/t08-sale-is-not-saving.webp": [
-  560,
-  581
+ "/a/sticker/07-taxes-help-all.webp": [
+  480,
+  508
  ],
- "/a/sticker/t09-track-subscriptions.webp": [
-  560,
-  484
+ "/a/sticker/08-compound-power.webp": [
+  480,
+  508
  ],
- "/a/sticker/t10-my-first-account.webp": [
-  560,
-  530
+ "/a/sticker/08-goal-reached.webp": [
+  480,
+  525
  ],
- "/a/sticker/t11-learn-the-market.webp": [
-  560,
-  522
+ "/a/sticker/08-stay-covered.webp": [
+  480,
+  508
  ],
- "/a/sticker/t12-side-hustle-era.webp": [
-  560,
-  501
+ "/a/sticker/08-the-giver.webp": [
+  480,
+  525
  ],
- "/a/sticker/t13-avoid-the-emi-trap.webp": [
-  560,
-  491
+ "/a/sticker/09-pin-secret.webp": [
+  480,
+  508
  ],
- "/a/sticker/t14-goal-loading.webp": [
-  560,
-  552
+ "/a/sticker/09-scam-alert.webp": [
+  480,
+  508
  ],
- "/a/sticker/t15-diversify.webp": [
-  560,
-  424
+ "/a/sticker/10-hi-im-rupi.webp": [
+  480,
+  508
  ],
- "/a/sticker/t16-money-mindset.webp": [
-  560,
-  569
+ "/a/sticker/10-share-give.webp": [
+  480,
+  508
+ ],
+ "/a/sticker/11-earn-it.webp": [
+  480,
+  508
+ ],
+ "/a/sticker/11-pay-yourself-first.webp": [
+  480,
+  508
+ ],
+ "/a/sticker/12-money-fun.webp": [
+  480,
+  508
+ ],
+ "/a/sticker/12-spread-it-out.webp": [
+  480,
+  508
  ],
  "/a/testimonials-and-team/avatar-csr-professional.webp": [
   480,

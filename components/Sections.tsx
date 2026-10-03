@@ -118,17 +118,12 @@ export function JoinBanner({ title = "Ready to become money smart?", text = "Bri
   );
 }
 
-/** Mascot holding up a fan of money cards, with a hand-lettered “let’s get money smart”. */
+/** Rupi the coin mascot with a hand-lettered “let’s get money smart”. */
 export function LetsLockup({ small }: { small?: boolean }) {
   return (
     <div className={`lockup${small ? " small" : ""}`} aria-hidden="true">
       <div className="lockup-art">
-        <Img src="/a/mascot-poses/mascot-celebrate.webp" alt="" sizes="220px" loading="lazy" />
-        <div className="fan">
-          <span className="fan-card c1">₹</span>
-          <span className="fan-card c2">%</span>
-          <span className="fan-card c3">★</span>
-        </div>
+        <Img className="sticker" src="/a/sticker/10-hi-im-rupi.webp" alt="" sizes="220px" loading="lazy" />
       </div>
       <p className="lockup-word">
         <span className="lets">let’s</span> <span className="loud">GET MONEY SMART</span>
@@ -232,14 +227,14 @@ export function Comparison() {
           </h2>
           <div className="sk-labels" aria-hidden="true">
             <div className="sk-label">
-              <Img src="/a/mascot-poses/mascot-think.webp" alt="" sizes="90px" loading="lazy" />
+              <Img src="/a/sticker/06-rupi-thinks.webp" alt="" sizes="90px" loading="lazy" />
               <span className="sk-tag">Typical lesson</span>
             </div>
             <Arrow className="sk-arrow l" />
             <Arrow className="sk-arrow r" />
             <div className="sk-label fun">
               <span className="sk-tag">FinFun session</span>
-              <Img src="/a/mascot-poses/mascot-celebrate.webp" alt="" sizes="110px" loading="lazy" />
+              <Img src="/a/sticker/05-rupi-approves.webp" alt="" sizes="120px" loading="lazy" />
             </div>
           </div>
         </div>

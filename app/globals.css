@@ -1,7 +1,8 @@
 /* FinFun design tokens — from the brand style guide */
 :root {
-  --yellow: #f4c542;
-  --blue: #2e5bd8;
+  --yellow: #fecc00; /* logo yellow */
+  --blue: #2970e3; /* logo blue */
+  --blue-ink: #1f5cc4; /* darker blue for small text on cream (AA) */
   --sky: #8ec3f0;
   --pink: #ee9fb8;
   --lavender: #c3a3df;
@@ -57,7 +58,7 @@ img {
 }
 
 a {
-  color: var(--blue);
+  color: var(--blue-ink);
 }
 
 h1,
@@ -340,14 +341,13 @@ p {
   min-height: 72px;
 }
 .logo {
-  font-family: var(--font-caps), cursive;
-  font-size: 2rem;
-  color: var(--blue);
-  text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 8px;
-  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+.logo img {
+  width: clamp(104px, 12vw, 128px);
+  height: auto;
 }
 .logo-coin {
   width: 34px;
@@ -818,7 +818,7 @@ p {
 }
 .quote figcaption strong {
   display: block;
-  color: var(--blue);
+  color: var(--blue-ink);
 }
 .quote figcaption span {
   color: var(--muted);
@@ -1203,8 +1203,11 @@ p {
   display: grid;
   gap: 8px;
 }
-.footer .logo {
-  color: var(--white);
+.footer .logo img {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 8px 12px;
+  width: 140px;
 }
 .footer-bottom {
   border-top: 1px solid #444;
@@ -1334,7 +1337,7 @@ p {
 }
 .way-who {
   font-weight: 800;
-  color: var(--blue) !important;
+  color: var(--blue-ink) !important;
   font-size: 0.95rem;
 }
 .way-sky {
@@ -1418,10 +1421,7 @@ p {
   justify-content: flex-start;
 }
 .sk-label img {
-  width: clamp(64px, 9vw, 104px);
-}
-.sk-label.fun img {
-  width: clamp(84px, 11vw, 124px);
+  width: clamp(92px, 11vw, 132px);
 }
 .sk-tag {
   font-family: var(--font-caps), cursive;
@@ -1582,46 +1582,12 @@ p {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  gap: clamp(44px, 5vw, 64px);
-  padding-top: 40px;
+  gap: clamp(20px, 3vw, 36px);
 }
 .lockup-art {
   position: relative;
   width: clamp(140px, 17vw, 210px);
   flex: none;
-}
-.fan {
-  position: absolute;
-  right: -30%;
-  top: -22%;
-  width: 92px;
-  height: 80px;
-}
-.fan-card {
-  position: absolute;
-  bottom: 0;
-  left: 26px;
-  width: 42px;
-  height: 58px;
-  display: grid;
-  place-items: center;
-  border: 2.5px solid var(--ink);
-  border-radius: 6px;
-  font-family: var(--font-caps), cursive;
-  font-size: 1.5rem;
-  transform-origin: 50% 110%;
-}
-.fan-card.c1 {
-  background: var(--green);
-  transform: rotate(-22deg);
-}
-.fan-card.c2 {
-  background: var(--sky);
-  transform: rotate(0deg);
-}
-.fan-card.c3 {
-  background: var(--pink);
-  transform: rotate(22deg);
 }
 .lockup-word {
   margin: 0 0 18px;

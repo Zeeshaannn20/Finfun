@@ -1,13 +1,10 @@
 import Link from "next/link";
+import Img from "./Img";
 
-// TODO(FinFun): replace with the official SVG logo once supplied.
 export default function Logo() {
   return (
     <Link href="/" className="logo" aria-label="FinFun home">
-      <span className="logo-coin" aria-hidden="true">
-        ₹
-      </span>
-      FINFUN
+      <Img src="/a/logo.webp" alt="FinFun" sizes="140px" priority />
     </Link>
   );
 }

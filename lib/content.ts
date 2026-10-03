@@ -51,9 +51,9 @@ export const values = [
 ];
 
 export const howItWorks = [
-  { title: "Learn", text: "Short, story-led lessons on one real money topic at a time.", img: "/a/mascot-poses/mascot-read.webp" },
-  { title: "Play", text: "Games, quizzes, role-play and challenges put every idea into action.", img: "/a/icons/journey-interactive-activities.webp" },
-  { title: "Grow", text: "Badges, leaderboards and real savings goals keep teens coming back.", img: "/a/icons/journey-leader-board.webp" },
+  { title: "Learn", text: "Short, story-led lessons on one real money topic at a time.", img: "/a/sticker/07-money-coach.webp" },
+  { title: "Play", text: "Games, quizzes, role-play and challenges put every idea into action.", img: "/a/sticker/12-money-fun.webp" },
+  { title: "Grow", text: "Badges, leaderboards and real savings goals keep teens coming back.", img: "/a/sticker/02-money-grows.webp" },
 ];
 
 export const methods = [
@@ -103,14 +103,14 @@ export const programs: Program[] = [
     grades: "Grades 6–7",
     price: 1499,
     focus: "Needs vs wants, budgeting, saving goals, UPI and scam safety.",
-    sticker: "/a/sticker/c05-do-i-really-need-it.webp",
+    sticker: "/a/sticker/06-need-or-want.webp",
     topics: [
-      { title: "Needs vs wants", text: "The one question to ask before every purchase.", sticker: "/a/sticker/c05-do-i-really-need-it.webp" },
-      { title: "Budgeting", text: "Split pocket money with the 50-30-20 rule.", sticker: "/a/sticker/t06-50-30-20-rule.webp" },
-      { title: "Saving goals", text: "Plan for the laptop, the shoes, the trip.", sticker: "/a/sticker/c11-saving-for-my-laptop.webp" },
-      { title: "UPI and scan safety", text: "Pay smart, check the name, never rush.", sticker: "/a/sticker/c01-pay-smart-not-fast.webp" },
-      { title: "Scam safety", text: "Spot fake prizes and never share an OTP.", sticker: "/a/sticker/c04-never-share-otp.webp" },
-      { title: "Sale is not saving", text: "See through discounts and impulse buys.", sticker: "/a/sticker/t08-sale-is-not-saving.webp" },
+      { title: "Needs vs wants", text: "The one question to ask before every purchase.", sticker: "/a/sticker/06-need-or-want.webp" },
+      { title: "Budgeting", text: "Split pocket money with the 50-30-20 rule.", sticker: "/a/sticker/03-budget-boss.webp" },
+      { title: "Saving goals", text: "Plan for the laptop, the shoes, the trip.", sticker: "/a/sticker/04-goal-set.webp" },
+      { title: "UPI and scan safety", text: "Pay smart, check the name, never rush.", sticker: "/a/sticker/04-smart-spender.webp" },
+      { title: "Scam safety", text: "Spot fake prizes and never share an OTP.", sticker: "/a/sticker/09-scam-alert.webp" },
+      { title: "Sale is not saving", text: "See through discounts and impulse buys.", sticker: "/a/sticker/03-wait-24-hours.webp" },
     ],
     format: ["Weekly live sessions with a FinFun trainer", "Games, quizzes and challenges every session", "Printable activity kit", "Badges and a completion certificate"],
     checkoutUrl: process.env.NEXT_PUBLIC_CHECKOUT_PRO ?? "",
@@ -121,14 +121,14 @@ export const programs: Program[] = [
     grades: "Grades 8–10",
     price: 2499,
     focus: "Banking, SIPs and compounding, inflation, investing basics, side hustles.",
-    sticker: "/a/sticker/c07-investor-in-training.webp",
+    sticker: "/a/sticker/03-the-investor.webp",
     topics: [
-      { title: "My first bank account", text: "Savings accounts, debit cards and staying safe.", sticker: "/a/sticker/t10-my-first-account.webp" },
-      { title: "SIPs and compounding", text: "Why starting early beats starting big.", sticker: "/a/sticker/t04-start-a-sip-early.webp" },
-      { title: "Inflation is real", text: "What ₹100 buys today vs in ten years.", sticker: "/a/sticker/t05-inflation-is-real.webp" },
-      { title: "Investing basics", text: "Stocks, funds, risk and why we diversify.", sticker: "/a/sticker/t15-diversify.webp" },
-      { title: "Side hustles", text: "Earning your first income, the smart way.", sticker: "/a/sticker/t12-side-hustle-era.webp" },
-      { title: "Avoid the EMI trap", text: "How loans and ‘no-cost EMI’ really work.", sticker: "/a/sticker/t13-avoid-the-emi-trap.webp" },
+      { title: "My first bank account", text: "Savings accounts, debit cards and staying safe.", sticker: "/a/sticker/04-bank-buddy.webp" },
+      { title: "SIPs and compounding", text: "Why starting early beats starting big.", sticker: "/a/sticker/01-sip-every-month.webp" },
+      { title: "Inflation is real", text: "What ₹100 buys today vs in ten years.", sticker: "/a/sticker/03-prices-rise.webp" },
+      { title: "Investing basics", text: "Stocks, funds, risk and why we diversify.", sticker: "/a/sticker/12-spread-it-out.webp" },
+      { title: "Side hustles", text: "Earning your first income, the smart way.", sticker: "/a/sticker/11-earn-it.webp" },
+      { title: "Avoid the EMI trap", text: "How loans and ‘no-cost EMI’ really work.", sticker: "/a/sticker/06-borrow-smart.webp" },
     ],
     format: ["Weekly live sessions with a FinFun trainer", "Case studies and market simulation games", "Printable activity kit", "Badges and a completion certificate"],
     checkoutUrl: process.env.NEXT_PUBLIC_CHECKOUT_ADVANTAGE ?? "",
@@ -138,12 +138,12 @@ export const programs: Program[] = [
 export const getProgram = (slug: string) => programs.find((p) => p.slug === slug);
 
 export const parentTopics = [
-  { title: "Budgeting", grade: "Grade 6+", sticker: "/a/sticker/t06-50-30-20-rule.webp" },
-  { title: "Saving goals", grade: "Grade 6+", sticker: "/a/sticker/t14-goal-loading.webp" },
-  { title: "UPI and scam safety", grade: "Grade 6+", sticker: "/a/sticker/t02-scam-not-today.webp" },
-  { title: "First bank account", grade: "Grade 8+", sticker: "/a/sticker/c09-my-first-debit-card.webp" },
-  { title: "SIPs and investing basics", grade: "Grade 8+", sticker: "/a/sticker/t03-let-it-compound.webp" },
-  { title: "Side hustles", grade: "Grade 8+", sticker: "/a/sticker/t12-side-hustle-era.webp" },
+  { title: "Budgeting", grade: "Grade 6+", sticker: "/a/sticker/02-the-budgeter.webp" },
+  { title: "Saving goals", grade: "Grade 6+", sticker: "/a/sticker/08-goal-reached.webp" },
+  { title: "UPI and scam safety", grade: "Grade 6+", sticker: "/a/sticker/02-scam-spotter.webp" },
+  { title: "First bank account", grade: "Grade 8+", sticker: "/a/sticker/04-bank-buddy.webp" },
+  { title: "SIPs and investing basics", grade: "Grade 8+", sticker: "/a/sticker/08-compound-power.webp" },
+  { title: "Side hustles", grade: "Grade 8+", sticker: "/a/sticker/01-the-entrepreneur.webp" },
 ];
 
 export type Testimonial = {
@@ -248,12 +248,12 @@ export const partners = [
 
 // TODO(FinFun): replace with real classroom photos (grades 6–10, with written consent).
 export const classroom = [
-  { caption: "Scam-spotting challenge", sticker: "/a/sticker/t02-scam-not-today.webp", bg: "var(--pink-soft)" },
-  { caption: "UPI role-play", sticker: "/a/sticker/t01-scan-smart.webp", bg: "var(--sky-soft)" },
-  { caption: "Budget battle", sticker: "/a/sticker/t06-50-30-20-rule.webp", bg: "var(--yellow-soft)" },
-  { caption: "Money quiz finals", sticker: "/a/sticker/c08-money-quiz-champ.webp", bg: "var(--green-soft)" },
-  { caption: "Investing 101", sticker: "/a/sticker/c10-read-learn-invest.webp", bg: "var(--lavender-soft)" },
-  { caption: "Goal-setting letters", sticker: "/a/sticker/t14-goal-loading.webp", bg: "var(--pink-soft)" },
+  { caption: "Scam-spotting challenge", sticker: "/a/sticker/09-scam-alert.webp", bg: "var(--pink-soft)" },
+  { caption: "UPI role-play", sticker: "/a/sticker/09-pin-secret.webp", bg: "var(--sky-soft)" },
+  { caption: "Budget battle", sticker: "/a/sticker/03-budget-boss.webp", bg: "var(--yellow-soft)" },
+  { caption: "Money quiz finals", sticker: "/a/sticker/12-money-fun.webp", bg: "var(--green-soft)" },
+  { caption: "Investing 101", sticker: "/a/sticker/02-own-a-slice.webp", bg: "var(--lavender-soft)" },
+  { caption: "Goal-setting letters", sticker: "/a/sticker/04-goal-set.webp", bg: "var(--pink-soft)" },
 ];
 
 export const parentFaq = [

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function Blog() {
   return (
     <>
-      <PageHero eyebrow="Blog" title={<>Money tips that <span className="mark">actually help</span></>} lead="Short, practical guides for teens, parents and teachers." art="/a/sticker/c10-read-learn-invest.webp" tone="bg-sky" />
+      <PageHero eyebrow="Blog" title={<>Money tips that <span className="mark">actually help</span></>} lead="Short, practical guides for teens, parents and teachers." art="/a/sticker/05-hi-im-finbot.webp" tone="bg-sky" />
       <section className="section">
         <div className="wrap">
           <BlogList posts={posts} />
