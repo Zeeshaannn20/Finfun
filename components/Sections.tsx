@@ -24,7 +24,7 @@ export function PageHero({ eyebrow, title, lead, art, artAlt = "", children, ton
           {lead && <p className="lead">{lead}</p>}
           {children}
         </div>
-        {art && <Img className="page-hero-art sticker float" src={art} alt={artAlt} priority sizes="360px" />}
+        {art && <Img className="page-hero-art sticker" src={art} alt={artAlt} priority sizes="360px" />}
       </div>
     </section>
   );

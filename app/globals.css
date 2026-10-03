@@ -483,58 +483,55 @@ p {
   color: var(--muted);
   font-size: 0.95rem;
 }
-/* 2x2 sticker grid: every sticker (and its caption) fully visible, none overlapping */
-.collage {
-  position: relative;
+/* hero bento: one big sticker, two small, topic chips — all still, no rotation or motion */
+.bento {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(14px, 3vw, 28px);
-  padding: clamp(10px, 3vw, 28px);
-  width: 100%;
-}
-.collage-blob {
-  position: absolute;
-  inset: 8%;
-  border-radius: 50%;
-  background: var(--sky-soft);
+  grid-template-columns: 2fr 1fr; /* big tile height ≈ two small tiles stacked */
+  align-items: center;
+  gap: clamp(12px, 2vw, 18px);
+  padding: clamp(16px, 2.6vw, 26px);
+  background-color: var(--blue);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.18) 1.6px, transparent 1.6px);
+  background-size: 22px 22px;
   border: var(--line);
-  z-index: -1;
+  border-radius: 32px;
+  box-shadow: 8px 8px 0 var(--yellow), 8px 8px 0 3px var(--ink);
 }
-.collage .st {
+.bento-tile {
+  display: grid;
+  place-items: center;
+}
+.bento-tile img {
   width: 100%;
   height: auto;
-  align-self: center;
+  filter: drop-shadow(0 6px 12px rgba(10, 30, 80, 0.25));
 }
-.collage .st:nth-of-type(1) {
-  transform: rotate(-5deg);
+.bento-main {
+  grid-row: span 2;
 }
-.collage .st:nth-of-type(2) {
-  transform: rotate(4deg);
+.bento-chips {
+  grid-column: 1 / -1;
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
 }
-.collage .st:nth-of-type(3) {
-  transform: rotate(3deg);
+.bento-chips li {
+  background: var(--white);
+  color: var(--ink);
+  font-weight: 800;
+  font-size: 0.92rem;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 2px solid var(--ink);
 }
-.collage .st:nth-of-type(4) {
-  transform: rotate(-4deg);
-}
-.collage {
-  isolation: isolate;
-}
-.float {
-  animation: float 5s ease-in-out infinite;
-}
-.float.d2 {
-  animation-delay: -2.5s;
-}
-@keyframes float {
-  50% {
-    translate: 0 -8px;
-  }
+.bento-chips li:nth-child(odd) {
+  background: var(--yellow);
 }
 @media (prefers-reduced-motion: reduce) {
-  .float {
-    animation: none;
-  }
   html {
     scroll-behavior: auto;
   }

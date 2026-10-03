@@ -38,12 +38,21 @@ export default function Home() {
             </div>
             <p className="hero-note">Trusted by 35,000+ schools across India</p>
           </div>
-          <div className="collage" aria-hidden="true">
-            <div className="collage-blob" />
-            <Img className="st sticker float" src="/a/sticker/04-smart-spender.webp" alt="" priority sizes="(max-width: 860px) 40vw, 240px" />
-            <Img className="st sticker float d2" src="/a/sticker/02-scam-spotter.webp" alt="" priority sizes="(max-width: 860px) 40vw, 240px" />
-            <Img className="st sticker float d2" src="/a/sticker/03-the-investor.webp" alt="" sizes="(max-width: 860px) 40vw, 240px" />
-            <Img className="st sticker float" src="/a/sticker/01-sip-every-month.webp" alt="" sizes="(max-width: 860px) 40vw, 240px" />
+          <div className="bento">
+            <div className="bento-tile bento-main">
+              <Img src="/a/sticker/10-hi-im-rupi.webp" alt="Rupi, the FinFun coin mascot" priority sizes="(max-width: 860px) 60vw, 320px" />
+            </div>
+            <div className="bento-tile">
+              <Img src="/a/sticker/02-scam-spotter.webp" alt="Scam Spotter sticker" priority sizes="(max-width: 860px) 30vw, 160px" />
+            </div>
+            <div className="bento-tile">
+              <Img src="/a/sticker/01-sip-every-month.webp" alt="SIP every month sticker" priority sizes="(max-width: 860px) 30vw, 160px" />
+            </div>
+            <ul className="bento-chips" aria-label="Topics teens learn">
+              {["UPI safety", "Budgeting", "Saving goals", "SIPs", "Scam alerts"].map((t) => (
+                <li key={t}>{t}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
